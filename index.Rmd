@@ -1,6 +1,6 @@
 --- 
-title: "YOUR TITLE HERE"
-author: "YOUR NAME HERE"
+title: "Hanndout für R Grundkurs"
+author: "Peter Kannewitz & Peer Schwertfeger"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 ---
