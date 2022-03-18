@@ -1,9 +1,18 @@
 --- 
-title: "Hanndout für R Grundkurs"
+title: "Handout für R Grundkurs"
 author: "Peter Kannewitz & Peer Schwertfeger"
-date: "`r Sys.Date()`"
+subtitle: "URZ und Academic Lab Universität Leipzig"
+date: "Stand: `r Sys.Date()`"
 site: bookdown::bookdown_site
 ---
 
-# Down the rabbit-hole
+# Einführung
+
+Dieses Handout ist Teil des Grundkurses in R am URZ und am Academic Lab der Uni Leipzig. Dieses Dokument ist in ständiger Bearbeitung und kann sich daher regelmäßig Ändern. 
+
+## Was ist R und warum sollte man R lernen?
+
+R ist eine freie Programmiersprache, die in erster Linie für statistische Analysen konzipiert wurde. Durch ihre große Community (siehe [Stack Overflow](https://stackoverflow.com/questions) oder [RBlogger](https://www.r-bloggers.com)) und ihre ständige Weiterentwicklung durch sogenannte *Packages*, ist der Funktionsumfang von R praktisch unbegrenzt.
+
+
 
