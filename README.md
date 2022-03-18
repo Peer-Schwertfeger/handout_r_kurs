@@ -45,7 +45,6 @@ This is a template for creating an [HTML GitBook style](https://bookdown.org/yih
 
 (You will need to repeat steps 2 and 4 every time you wish to update the book online.)
 
-Something...
 
 Please consult the official guide to **bookdown**: https://bookdown.org/yihui/bookdown
 
