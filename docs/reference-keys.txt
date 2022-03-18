@@ -1,4 +1,6 @@
 einführung
 was-ist-r-und-warum-sollte-man-r-lernen
-the-pool-of-tears
+datentypen
+atomare-datentypen
+strukturierte-datentypen
 a-caucus-race-and-a-long-tale

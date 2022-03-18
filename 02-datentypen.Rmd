@@ -1,2 +1,6 @@
-# The pool of tears
+# Datentypen
+
+## Atomare Datentypen
+
+## Strukturierte Datentypen
 
