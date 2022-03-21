@@ -14,5 +14,16 @@ Dieses Handout ist Teil des Grundkurses in R am URZ und am Academic Lab der Uni 
 
 R ist eine freie Programmiersprache, die in erster Linie für statistische Analysen konzipiert wurde. Durch ihre große Community (siehe [Stack Overflow](https://stackoverflow.com/questions) oder [RBlogger](https://www.r-bloggers.com)) und ihre ständige Weiterentwicklung durch sogenannte *Packages*, ist der Funktionsumfang von R praktisch unbegrenzt.
 
+Neben den *klassischen* Funktionen statistischer Software (Datenaufbereitung, Analysen, Graphikerstellung) sind z.B. folgende Anwendungen möglich:
+
+- Erstellen von Präsentationen und Papern (mit RMarkdown)
+- Webscraping
+- Qualitative Textanalyse
+- Auslesen von Datenbanken
+- Automatisierungen
+- uvm.
+
+Zum Teil durch die vielfältigen Anwendungsmöglichkeiten hat sich bzw. entwickelt sich
+R zum Goldstandard in der akademischen Welt und in vielen Bereichen der Wirtschaft.
 
 
