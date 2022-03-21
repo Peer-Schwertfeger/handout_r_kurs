@@ -48,3 +48,12 @@ This is a template for creating an [HTML GitBook style](https://bookdown.org/yih
 
 Please consult the official guide to **bookdown**: https://bookdown.org/yihui/bookdown
 
+
+
+
+
+`bookdown::render_book("index.Rmd")`
+
+`browseURL("https://peer-schwertfeger.github.io/handout_r_kurs/")`
+
+
