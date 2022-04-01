@@ -88,9 +88,9 @@ rundet eine Zahl `x` auf `digits` signifikante Stellen.
 
 ### Was wir bisher getan haben
 
-“To understand computations in R, two slogans are helpful: Everything that exists is an object. Everything that happens is a function call.”  (John M. Chambers) [^1]
+“To understand computations in R, two slogans are helpful: Everything that exists is an object. Everything that happens is a function call.”  (John M. Chambers) [^2]
 
-[^1]: https://de.wikipedia.org/wiki/R_%28Programmiersprache%29
+[^2]: https://de.wikipedia.org/wiki/R_%28Programmiersprache%29
 
 \bigskip
 

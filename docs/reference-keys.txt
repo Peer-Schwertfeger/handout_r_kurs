@@ -1,5 +1,11 @@
 einführung
 was-ist-r-und-warum-sollte-man-r-lernen
+installation
+oberfläche
+r-gui
+rstudio
+console
+script-editor
 atomare-datentypen
 arithmetische-grundoperationen-und-basisfunktionen
 funktionsaufrufe
@@ -16,4 +22,4 @@ zeichen-character
 klasse-eines-datenobjektes
 spezielle-werte
 prüfe-dich-selbst
-a-caucus-race-and-a-long-tale
+funktionen
