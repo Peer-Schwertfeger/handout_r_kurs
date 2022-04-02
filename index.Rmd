@@ -34,24 +34,24 @@ Wie auch bei Sprachen, lernt man Programmiersprachen nicht (nur) durch Kurse. Ei
 
 Warum sollte man das auf sich nehmen?
 
-6 Gründe, R zu lernen:
+**6 Gründe, R zu lernen**:
 
 1. *Open Source* und plattformübergreifend
 2. Praktisch unbegrenzter Funktionsumfang
 3. Entwickelt sich zum Standard in akademischer Welt und in der Wirtschaft
 4. Publizierfähige Graphiken
 5. Integration von Aufbereitung, Analyse und Präsentation
-6. Internationale Community ([\textcolor{blue}{Stack Overflow}](https://stackoverflow.com/questions/tagged/r), [\textcolor{blue}{RBloggers}](https://www.r-bloggers.com) etc.)
+6. Internationale Community ([Stack Overflow](https://stackoverflow.com/questions/tagged/r), [RBloggers](https://www.r-bloggers.com) etc.)
 
 ## Installation 
 
 Zunächst muss unser Computer R "lernen".
 
-Um R zu installieren, gehe auf die entsprechende [\textcolor{blue}{Cran Website}](https://cran.r-project.org). Wähle dein Betriebssystem aus und folge 
+Um R zu installieren, gehe auf die entsprechende [Cran Website](https://cran.r-project.org). Wähle dein Betriebssystem aus und folge 
 den Anweisungen auf der Website.
 
 Um produktiv zu arbeiten, sollte zusätzlich die open source-Vesion von RStudio 
-installiert werden. Weitere Infos hierzu gibt es [\textcolor{blue}{hier}](https://www.rstudio.com).
+installiert werden. Weitere Infos hierzu gibt es [hier](https://www.rstudio.com).
 
 # Oberfläche
 
@@ -62,7 +62,7 @@ mitinstalliert. Hier können wir bereits R Code eingeben und mit `Enter` an den
 Computer übergeben. In der nächsten Zeile wird die Antwort vom Computer an uns
 zurückgegeben.
 
-```{r, echo=FALSE, out.width='80%', fig.align='center'}
+```{r, echo=FALSE, out.width='80%', fig.align='center', fig.cap="R GUI"}
 knitr::include_graphics("resources/GUI.png")
 ```
 
@@ -80,13 +80,13 @@ RStudio bietet eine nutzer:innenfreundliche (und freie) Alternative für die Nut
 
 Das Interface von RStudio besteht aus mehreren Fenstern.
 
-```{r, echo=FALSE, out.width='80%', fig.align='center'}
+```{r, echo=FALSE, out.width='80%', fig.align='center', fig.cap="RStudio Interface"}
 knitr::include_graphics("resources/interface.png")
 ```
 
 ### Console
 
-```{r, echo=FALSE, out.width='80%', fig.align='center'}
+```{r, echo=FALSE, out.width='80%', fig.align='center', fig.cap="Console"}
 knitr::include_graphics("resources/console.png")
 ```
 
@@ -125,25 +125,32 @@ markiert werden.
 Mit `#` lassen sich Kommentare in das Script schreiben. Zeilen, in denen dieses 
 Zeichen steht, werden von R ignoriert und nicht ausgeführt.
 
-```{=latex}
-\begin{minipage}[t]{0.5\linewidth}
+### File-Editor und Environment
+
+```{r, echo=FALSE,out.width="49%", out.height="20%",fig.cap="File-Editor und Environment-Oberfläche",fig.show='hold',fig.align='center'}
+knitr::include_graphics(c("resources/files.png","resources/envi.png"))
 ```
 
-```{r, echo=FALSE, out.width='80%', fig.align='center'}
-knitr::include_graphics("resources/envi.png")
-```
+Zusätzlich zu der Console und dem Skript-Editor bietet RStudio weitere Fenster,
+die die Arbeit mit R vereinfachen sollen.
 
-```{=latex}
-\end{minipage}%
-\begin{minipage}[t]{0.5\linewidth}
-```
+Das Fenster unten rechts (Standardeinstellung, Abb. 2.4a) beinhaltet einen **File-Editor** 
+(ähnlich zum File Browser (Win) bzw. Finder (Mac)). Hier können Dateien und 
+Verzeichnisstrukturen angesehen und bearbeitet werden (neuer Ordner, Umbenennen
+von Dateien). Außerdem werden hier **Graphiken angezeigt**, wenn diese über Code in
+Scripten oder in der Console erzeugt werden. Des Weiteren gibt es hier eine 
+**Übersicht über Packages** und das **Help** Fenster.
 
-```{r, echo=FALSE, out.width='80%', fig.align='center'}
-knitr::include_graphics("resources/files.png")
-```
+Oben rechts (Standardeinstellung, Abb. 2.4b) existiert die **Global Environment**, in dem 
+alle gespeicherten Objekte angezeigt werden. Schließlich kann man hier auf die 
+**History** und **Verbindungen**, wie GitHub, zugegriffen werden.
 
-```{=latex}
-\end{minipage}
-```
+## Prüfe dich selbst
 
+Von dieser Sitzung solltest du folgendes mitgenommen haben: 
+
+- [x] Du solltest die Wesentliche Funktionsweise von R verstanden haben.
+- [x] Du solltest den Aufbau von RStudio kennen.
+- [x] Du solltest wissen, was ein Script ist und wie es geöffnet werden kann.
+- [x] Du solltest wissen, wie Befehlssequenzen in der Console und in einem Script ausgeführt werden.
 

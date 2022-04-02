@@ -1,3 +1,7 @@
+fig:unnamed-chunk-1
+fig:unnamed-chunk-2
+fig:unnamed-chunk-3
+fig:unnamed-chunk-5
 einführung
 was-ist-r-und-warum-sollte-man-r-lernen
 installation
@@ -6,6 +10,8 @@ r-gui
 rstudio
 console
 script-editor
+file-editor-und-environment
+prüfe-dich-selbst
 atomare-datentypen
 arithmetische-grundoperationen-und-basisfunktionen
 funktionsaufrufe
@@ -21,5 +27,5 @@ vergleichs-operationen
 zeichenketten-character-strings
 klasse-eines-datenobjektes
 spezielle-werte
-prüfe-dich-selbst
+prüfe-dich-selbst-1
 funktionen
