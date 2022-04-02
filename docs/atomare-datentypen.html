@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 3 Atomare Datentypen | Handout für R Grundkurs</title>
-  <meta name="description" content="Chapter 3 Atomare Datentypen | Handout für R Grundkurs" />
+  <title>Kapitel 3 Atomare Datentypen | Handout für R Grundkurs</title>
+  <meta name="description" content="Kapitel 3 Atomare Datentypen | Handout für R Grundkurs" />
   <meta name="generator" content="bookdown 0.25 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 3 Atomare Datentypen | Handout für R Grundkurs" />
+  <meta property="og:title" content="Kapitel 3 Atomare Datentypen | Handout für R Grundkurs" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 Atomare Datentypen | Handout für R Grundkurs" />
+  <meta name="twitter:title" content="Kapitel 3 Atomare Datentypen | Handout für R Grundkurs" />
   
   
   
@@ -132,7 +132,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">Handout</a></li>
+<li><a href="./">Handout R Kurs</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Einführung<span></span></a>
@@ -147,7 +147,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="2.2.1" data-path="oberfläche.html"><a href="oberfläche.html#console"><i class="fa fa-check"></i><b>2.2.1</b> Console<span></span></a></li>
 <li class="chapter" data-level="2.2.2" data-path="oberfläche.html"><a href="oberfläche.html#script-editor"><i class="fa fa-check"></i><b>2.2.2</b> Script Editor<span></span></a></li>
+<li class="chapter" data-level="2.2.3" data-path="oberfläche.html"><a href="oberfläche.html#file-editor-und-environment"><i class="fa fa-check"></i><b>2.2.3</b> File-Editor und Environment<span></span></a></li>
 </ul></li>
+<li class="chapter" data-level="2.3" data-path="oberfläche.html"><a href="oberfläche.html#prüfe-dich-selbst"><i class="fa fa-check"></i><b>2.3</b> Prüfe dich selbst<span></span></a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="atomare-datentypen.html"><a href="atomare-datentypen.html"><i class="fa fa-check"></i><b>3</b> Atomare Datentypen<span></span></a>
 <ul>
@@ -171,7 +173,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.4" data-path="atomare-datentypen.html"><a href="atomare-datentypen.html#zeichen-character"><i class="fa fa-check"></i><b>3.4</b> Zeichen (character)<span></span></a></li>
 <li class="chapter" data-level="3.5" data-path="atomare-datentypen.html"><a href="atomare-datentypen.html#klasse-eines-datenobjektes"><i class="fa fa-check"></i><b>3.5</b> Klasse eines Datenobjektes<span></span></a></li>
 <li class="chapter" data-level="3.6" data-path="atomare-datentypen.html"><a href="atomare-datentypen.html#spezielle-werte"><i class="fa fa-check"></i><b>3.6</b> Spezielle Werte<span></span></a></li>
-<li class="chapter" data-level="3.7" data-path="atomare-datentypen.html"><a href="atomare-datentypen.html#prüfe-dich-selbst"><i class="fa fa-check"></i><b>3.7</b> Prüfe dich selbst<span></span></a></li>
+<li class="chapter" data-level="3.7" data-path="atomare-datentypen.html"><a href="atomare-datentypen.html#prüfe-dich-selbst-1"><i class="fa fa-check"></i><b>3.7</b> Prüfe dich selbst<span></span></a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="funktionen.html"><a href="funktionen.html"><i class="fa fa-check"></i><b>4</b> Funktionen<span></span></a></li>
 <li class="divider"></li>
@@ -194,7 +196,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="atomare-datentypen" class="section level1 hasAnchor" number="3">
-<h1><span class="header-section-number">Chapter 3</span> Atomare Datentypen<a href="atomare-datentypen.html#atomare-datentypen" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<h1><span class="header-section-number">Kapitel 3</span> Atomare Datentypen<a href="atomare-datentypen.html#atomare-datentypen" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Datentypen sind die Grundlage einer jeder Programmiersprache und somit essenziell zum Verständnis dieser. Sie dienen dazu, verschiedene Typen unterscheiden. Etwa Zahlen von Buchstaben. Das ist besonders wichtig, da wir mit unterschiedlichen ‘Typen’ unterschiedliche Operationen ausführen, bzw. nicht ausführen, können. Zum Beispiel können wir mit Zahlen rechnen, mit Buchstaben hingegen nicht. Mit logischen Bedingungen können wir wiederum Wahrheitswerte ermitteln, mit Zahlen hingegen nicht. Zu wissen, welche Eigenschaften die verschiedene Datentypen haben und welche Operationen mit diesen möglich sind, hilft dabei vielen potenziellen Fehlern vorzubeugen und so Frustration zu vermeiden.</p>
 <p>Zunächst einmal wollen wir uns die atomaren Datentypen anschauen. Diese bilden die Grundlage aller folgenden Datentypen.</p>
 <table>
@@ -411,9 +413,8 @@ spätere Zwecke einem neuen Objekt zuordnen:</p>
 <p>Wir haben mittlerweile eine Menge Objekte im Speicher
 angelegt. Mit <code>ls()</code> kann man diese abrufen:</p>
 <div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="atomare-datentypen.html#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span>()</span></code></pre></div>
-<pre><code>##  [1] &quot;alter_moni&quot;         &quot;alter_tom&quot;          &quot;name_bundeskanzler&quot; &quot;p&quot;                 
-##  [5] &quot;q&quot;                  &quot;theendoftheworld&quot;   &quot;x_1&quot;                &quot;x_test&quot;            
-##  [9] &quot;y_test&quot;             &quot;z&quot;</code></pre>
+<pre><code>##  [1] &quot;alter_moni&quot;         &quot;alter_tom&quot;          &quot;name_bundeskanzler&quot; &quot;p&quot;                  &quot;q&quot;                  &quot;theendoftheworld&quot;  
+##  [7] &quot;x_1&quot;                &quot;x_test&quot;             &quot;y_test&quot;             &quot;z&quot;</code></pre>
 <p>Mit <code>rm()</code> kann man unnötige Objekte entfernen:</p>
 <div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="atomare-datentypen.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(y_test)</span></code></pre></div>
 <p>Wenn ihr gleich alle angelegten Objekte aus dem Arbeitsspeicher entfernen wollt:</p>
@@ -571,8 +572,8 @@ mit der Funktion <code>class()</code> ermitteln oder aber spezifisch/logisch pr�
 Wert ‘NA’) durch <code>NaN</code> (not a number)
 0/0</p>
 </div>
-<div id="prüfe-dich-selbst" class="section level2 hasAnchor" number="3.7">
-<h2><span class="header-section-number">3.7</span> Prüfe dich selbst<a href="atomare-datentypen.html#prüfe-dich-selbst" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="prüfe-dich-selbst-1" class="section level2 hasAnchor" number="3.7">
+<h2><span class="header-section-number">3.7</span> Prüfe dich selbst<a href="atomare-datentypen.html#prüfe-dich-selbst-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Von dieser Sitzung solltest du folgendes mitgenommen haben:</p>
 <ul class="task-list">
 <li><input type="checkbox" disabled="" checked="" />
