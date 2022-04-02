@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Handout für R Grundkurs</title>
-  <meta name="description" content="Handout für R Grundkurs" />
+  <title>Kapitel 1 Einführung | Handout für R Grundkurs</title>
+  <meta name="description" content="Kapitel 1 Einführung | Handout für R Grundkurs" />
   <meta name="generator" content="bookdown 0.25 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Handout für R Grundkurs" />
+  <meta property="og:title" content="Kapitel 1 Einführung | Handout für R Grundkurs" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Handout für R Grundkurs" />
+  <meta name="twitter:title" content="Kapitel 1 Einführung | Handout für R Grundkurs" />
   
   
   
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="einführung.html"/>
+<link rel="prev" href="index.html"/>
+<link rel="next" href="oberfläche.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -195,33 +195,62 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Handout für R Grundkurs</h1>
-<h2 class="subtitle"><em>URZ und Academic Lab Universität Leipzig</em></h2>
-<p class="author"><em><div class="line-block">Peter Kannewitz<br />
-<a href="mailto:peter.kannewitz@uni-leipzig.de" class="email">peter.kannewitz@uni-leipzig.de</a><br />
-<br />
-Peer Schwertfeger<br />
-<a href="mailto:peer.schwertfeger@uni-leipzig.de" class="email">peer.schwertfeger@uni-leipzig.de</a></div></em></p>
-<p class="date"><em>Stand: 2022-04-02</em></p>
+<div id="einführung" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">Kapitel 1</span> Einführung<a href="einführung.html#einführung" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-2"></span>
+<img src="resources/R_logo.png" alt="R Logo (https://www.r-project.org/logo/)" width="30%" />
+<p class="caption">
+Abb. 1.1: R Logo (<a href="https://www.r-project.org/logo/" class="uri">https://www.r-project.org/logo/</a>)
+</p>
 </div>
-<div id="vorwort" class="section level1 unnumbered hasAnchor">
-<h1>Vorwort<a href="index.html#vorwort" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Dieses Handout ist Teil des Grundkurses in R am URZ und am Academic Lab der Uni Leipzig.</p>
-<p>Besonderem Dank gilt Stephan Poppe und dem Statistik-Team des Instituts für Soziologie
-für die Unterstützung beim Erstellen der Materialien für diesen Kurs.</p>
-<p><img src="resources/construction.png" width="30%" style="display: block; margin: auto;" /></p>
-<p><strong>Hinweis</strong>:</p>
-<p>Dieses Handout ist ständig in Bearbeitung und erhebt keinen Anspruch auf Vollständigkeit. Bitte informiert uns,
-sollten Angaben nicht mehr aktuell sein bzw. sollten sich Fehler eingeschlichen haben. Vielen Dank!</p>
+<div id="was-ist-r-und-warum-sollte-man-r-lernen" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> Was ist R und warum sollte man R lernen?<a href="einführung.html#was-ist-r-und-warum-sollte-man-r-lernen" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>R ist eine freie Programmiersprache, die in erster Linie für statistische Analysen konzipiert wurde. Durch ihre große Community (siehe <a href="https://stackoverflow.com/questions">Stack Overflow</a> oder <a href="https://www.r-bloggers.com">RBlogger</a>) und ihre ständige Weiterentwicklung durch sogenannte <em>Packages</em>, ist der Funktionsumfang von R praktisch unbegrenzt.</p>
+<p>Neben den <em>klassischen</em> Funktionen statistischer Software (Datenaufbereitung, Analysen, Graphikerstellung) sind z.B. folgende Anwendungen möglich:</p>
+<ul>
+<li>Erstellen von Präsentationen und Papern (mit RMarkdown)</li>
+<li>Webscraping</li>
+<li>Qualitative Textanalyse</li>
+<li>Auslesen von Datenbanken</li>
+<li>Automatisierungen</li>
+<li>uvm.</li>
+</ul>
+<p>Zum Teil durch die vielfältigen Anwendungsmöglichkeiten hat sich bzw. entwickelt sich
+R zum Goldstandard in der akademischen Welt und in vielen Bereichen der Wirtschaft<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>.</p>
+<p>Wie auch bei Sprachen, lernt man Programmiersprachen nicht (nur) durch Kurse. Eine Aktive Auseinandersetzung mit konkreten Problemen hilft, “fließender” im Umgang mit der Sprache zu werden. Kommt man einmal nicht weiter (wird passieren… versprochen!), hilft es, sich solange mit dem Thema zu beschäftigen, bis eine Lösung gefunden wurde.</p>
+<p>Warum sollte man das auf sich nehmen?</p>
+<p><strong>6 Gründe, R zu lernen</strong>:</p>
+<ol style="list-style-type: decimal">
+<li><em>Open Source</em> und plattformübergreifend</li>
+<li>Praktisch unbegrenzter Funktionsumfang</li>
+<li>Entwickelt sich zum Standard in akademischer Welt und in der Wirtschaft</li>
+<li>Publizierfähige Graphiken</li>
+<li>Integration von Aufbereitung, Analyse und Präsentation</li>
+<li>Internationale Community (<a href="https://stackoverflow.com/questions/tagged/r">Stack Overflow</a>, <a href="https://www.r-bloggers.com">RBloggers</a> etc.)</li>
+</ol>
+</div>
+<div id="installation" class="section level2 hasAnchor" number="1.2">
+<h2><span class="header-section-number">1.2</span> Installation<a href="einführung.html#installation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Zunächst muss unser Computer R “lernen”.</p>
+<p>Um R zu installieren, gehe auf die entsprechende <a href="https://cran.r-project.org">Cran Website</a>. Wähle dein Betriebssystem aus und folge
+den Anweisungen auf der Website.</p>
+<p>Um produktiv zu arbeiten, sollte zusätzlich die open source-Vesion von RStudio
+installiert werden. Weitere Infos hierzu gibt es <a href="https://www.rstudio.com">hier</a>.</p>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="1">
+<li id="fn1"><p><a href="https://analyticsindiamag.com/has-python-completely-edged-out-r-in-data-science-field/" class="uri">https://analyticsindiamag.com/has-python-completely-edged-out-r-in-data-science-field/</a><a href="einführung.html#fnref1" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="einführung.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="oberfläche.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

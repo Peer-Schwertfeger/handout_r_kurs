@@ -20,7 +20,6 @@
   
   
 
-<meta name="author" content="Peter Kannewitz &amp; Peer Schwertfeger" />
 
 
 
@@ -29,7 +28,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
+<link rel="prev" href="einführung.html"/>
 <link rel="next" href="atomare-datentypen.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -135,10 +134,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./">Handout R Kurs</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Einführung<span></span></a>
+<li><a href="index.html#vorwort">Vorwort<span></span></a></li>
+<li class="chapter" data-level="1" data-path="einführung.html"><a href="einführung.html"><i class="fa fa-check"></i><b>1</b> Einführung<span></span></a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#was-ist-r-und-warum-sollte-man-r-lernen"><i class="fa fa-check"></i><b>1.1</b> Was ist R und warum sollte man R lernen?<span></span></a></li>
-<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#installation"><i class="fa fa-check"></i><b>1.2</b> Installation<span></span></a></li>
+<li class="chapter" data-level="1.1" data-path="einführung.html"><a href="einführung.html#was-ist-r-und-warum-sollte-man-r-lernen"><i class="fa fa-check"></i><b>1.1</b> Was ist R und warum sollte man R lernen?<span></span></a></li>
+<li class="chapter" data-level="1.2" data-path="einführung.html"><a href="einführung.html#installation"><i class="fa fa-check"></i><b>1.2</b> Installation<span></span></a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="oberfläche.html"><a href="oberfläche.html"><i class="fa fa-check"></i><b>2</b> Oberfläche<span></span></a>
 <ul>
@@ -203,16 +203,28 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 mitinstalliert. Hier können wir bereits R Code eingeben und mit <code>Enter</code> an den
 Computer übergeben. In der nächsten Zeile wird die Antwort vom Computer an uns
 zurückgegeben.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-1"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-3"></span>
 <img src="resources/GUI.png" alt="R GUI" width="80%" />
 <p class="caption">
-Figure 2.1: R GUI
+Abb. 2.1: R GUI
 </p>
 </div>
 <p>Diese Oberfläche ist jedoch wenig “komfortabel”. Sie bietet keine zusätzlichen Editoren oder Fenster, um z.B. die gespeicherten Objekte oder Graphiken anzuzeigen.</p>
 </div>
 <div id="rstudio" class="section level2 hasAnchor" number="2.2">
 <h2><span class="header-section-number">2.2</span> RStudio<a href="oberfläche.html#rstudio" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-4"></span>
+<img src="resources/RStudio.png" alt="RStudio Logo (https://www.rstudio.com/about/logos/)" width="60%" />
+<p class="caption">
+Abb. 2.2: RStudio Logo (<a href="https://www.rstudio.com/about/logos/" class="uri">https://www.rstudio.com/about/logos/</a>)
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-5"></span>
+<img src="resources/interface.png" alt="RStudio Interface" width="80%" />
+<p class="caption">
+Abb. 2.3: RStudio Interface
+</p>
+</div>
 <p>RStudio bietet eine nutzer:innenfreundliche (und freie) Alternative für die Nutzung von R. Hier sind zusätzliche Editoren und Übersichten enthalten. Zu nennen ist beispielsweise:</p>
 <ul>
 <li>Script-Editor</li>
@@ -222,18 +234,12 @@ Figure 2.1: R GUI
 <li>u.v.m.</li>
 </ul>
 <p>Das Interface von RStudio besteht aus mehreren Fenstern.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-2"></span>
-<img src="resources/interface.png" alt="RStudio Interface" width="80%" />
-<p class="caption">
-Figure 2.2: RStudio Interface
-</p>
-</div>
 <div id="console" class="section level3 hasAnchor" number="2.2.1">
 <h3><span class="header-section-number">2.2.1</span> Console<a href="oberfläche.html#console" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-3"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-6"></span>
 <img src="resources/console.png" alt="Console" width="80%" />
 <p class="caption">
-Figure 2.3: Console
+Abb. 2.4: Console
 </p>
 </div>
 <p>Die R Console dient zur direkten Übergabe von Ausdrücken bzw. Funktionen an R
@@ -262,21 +268,21 @@ Zeichen steht, werden von R ignoriert und nicht ausgeführt.</p>
 </div>
 <div id="file-editor-und-environment" class="section level3 hasAnchor" number="2.2.3">
 <h3><span class="header-section-number">2.2.3</span> File-Editor und Environment<a href="oberfläche.html#file-editor-und-environment" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-5"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:editor"></span>
 <img src="resources/files.png" alt="File-Editor und Environment-Oberfläche" width="49%" height="20%" /><img src="resources/envi.png" alt="File-Editor und Environment-Oberfläche" width="49%" height="20%" />
 <p class="caption">
-Figure 2.4: File-Editor und Environment-Oberfläche
+Abb. 2.5: File-Editor und Environment-Oberfläche
 </p>
 </div>
 <p>Zusätzlich zu der Console und dem Skript-Editor bietet RStudio weitere Fenster,
 die die Arbeit mit R vereinfachen sollen.</p>
-<p>Das Fenster unten rechts (Standardeinstellung, Abb. 2.4a) beinhaltet einen <strong>File-Editor</strong>
+<p>Das Fenster unten rechts (Standardeinstellung, Abbildung <a href="oberfläche.html#fig:editor">2.5</a>a) beinhaltet einen <strong>File-Editor</strong>
 (ähnlich zum File Browser (Win) bzw. Finder (Mac)). Hier können Dateien und
 Verzeichnisstrukturen angesehen und bearbeitet werden (neuer Ordner, Umbenennen
 von Dateien). Außerdem werden hier <strong>Graphiken angezeigt</strong>, wenn diese über Code in
 Scripten oder in der Console erzeugt werden. Des Weiteren gibt es hier eine
 <strong>Übersicht über Packages</strong> und das <strong>Help</strong> Fenster.</p>
-<p>Oben rechts (Standardeinstellung, Abb. 2.4b) existiert die <strong>Global Environment</strong>, in dem
+<p>Oben rechts (Standardeinstellung, Abbildung <a href="oberfläche.html#fig:editor">2.5</a>b) existiert die <strong>Global Environment</strong>, in dem
 alle gespeicherten Objekte angezeigt werden. Schließlich kann man hier auf die
 <strong>History</strong> und <strong>Verbindungen</strong>, wie GitHub, zugegriffen werden.</p>
 </div>
@@ -302,7 +308,7 @@ Du solltest wissen, wie Befehlssequenzen in der Console und in einem Script ausg
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="einführung.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="atomare-datentypen.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>

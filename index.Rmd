@@ -1,16 +1,38 @@
 --- 
 title: "Handout für R Grundkurs"
-author: "Peter Kannewitz & Peer Schwertfeger"
+author: |
+  | Peter Kannewitz 
+  | peter.kannewitz@uni-leipzig.de
+  |
+  | Peer Schwertfeger
+  | peer.schwertfeger@uni-leipzig.de
 subtitle: "URZ und Academic Lab Universität Leipzig"
 date: "Stand: `r Sys.Date()`"
 site: bookdown::bookdown_site
 ---
 
+# Vorwort {-}
+
+Dieses Handout ist Teil des Grundkurses in R am URZ und am Academic Lab der Uni Leipzig.
+
+Besonderem Dank gilt Stephan Poppe und dem Statistik-Team des Instituts für Soziologie
+für die Unterstützung beim Erstellen der Materialien für diesen Kurs.
+
+
+```{r, echo=FALSE, out.width='30%', fig.align='center'}
+knitr::include_graphics("resources/construction.png")
+```
+
+**Hinweis**:
+
+Dieses Handout ist ständig in Bearbeitung und erhebt keinen Anspruch auf Vollständigkeit. Bitte informiert uns,
+sollten Angaben nicht mehr aktuell sein bzw. sollten sich Fehler eingeschlichen haben. Vielen Dank! 
+
 # Einführung
 
-Dieses Handout ist Teil des Grundkurses in R am URZ und am Academic Lab der Uni Leipzig. Dieses Dokument ist in ständiger Bearbeitung und kann sich daher regelmäßig Ändern. 
-
-Besonderem Dank gilt Stephan Poppe für die Unterstützung beim Erstellen der Materialien für diesen Kurs.
+```{r, echo=FALSE, out.width='30%', fig.align='center', fig.cap="R Logo (https://www.r-project.org/logo/)"}
+knitr::include_graphics("resources/R_logo.png")
+```
 
 ## Was ist R und warum sollte man R lernen?
 
@@ -70,6 +92,14 @@ Diese Oberfläche ist jedoch wenig "komfortabel". Sie bietet keine zusätzlichen
 
 ## RStudio
 
+```{r, echo=FALSE, out.width='60%', fig.align='center', fig.cap="RStudio Logo (https://www.rstudio.com/about/logos/)"}
+knitr::include_graphics("resources/RStudio.png")
+```
+
+```{r, echo=FALSE, out.width='80%', fig.align='center', fig.cap="RStudio Interface"}
+knitr::include_graphics("resources/interface.png")
+```
+
 RStudio bietet eine nutzer:innenfreundliche (und freie) Alternative für die Nutzung von R. Hier sind zusätzliche Editoren und Übersichten enthalten. Zu nennen ist beispielsweise:
 
 - Script-Editor
@@ -79,10 +109,6 @@ RStudio bietet eine nutzer:innenfreundliche (und freie) Alternative für die Nut
 - u.v.m. 
 
 Das Interface von RStudio besteht aus mehreren Fenstern.
-
-```{r, echo=FALSE, out.width='80%', fig.align='center', fig.cap="RStudio Interface"}
-knitr::include_graphics("resources/interface.png")
-```
 
 ### Console
 
@@ -127,21 +153,21 @@ Zeichen steht, werden von R ignoriert und nicht ausgeführt.
 
 ### File-Editor und Environment
 
-```{r, echo=FALSE,out.width="49%", out.height="20%",fig.cap="File-Editor und Environment-Oberfläche",fig.show='hold',fig.align='center'}
+```{r editor, echo=FALSE,out.width="49%", out.height="20%",fig.cap="File-Editor und Environment-Oberfläche",fig.show='hold',fig.align='center'}
 knitr::include_graphics(c("resources/files.png","resources/envi.png"))
 ```
 
 Zusätzlich zu der Console und dem Skript-Editor bietet RStudio weitere Fenster,
 die die Arbeit mit R vereinfachen sollen.
 
-Das Fenster unten rechts (Standardeinstellung, Abb. 2.4a) beinhaltet einen **File-Editor** 
+Das Fenster unten rechts (Standardeinstellung, Abbildung \@ref(fig:editor)a) beinhaltet einen **File-Editor** 
 (ähnlich zum File Browser (Win) bzw. Finder (Mac)). Hier können Dateien und 
 Verzeichnisstrukturen angesehen und bearbeitet werden (neuer Ordner, Umbenennen
 von Dateien). Außerdem werden hier **Graphiken angezeigt**, wenn diese über Code in
 Scripten oder in der Console erzeugt werden. Des Weiteren gibt es hier eine 
 **Übersicht über Packages** und das **Help** Fenster.
 
-Oben rechts (Standardeinstellung, Abb. 2.4b) existiert die **Global Environment**, in dem 
+Oben rechts (Standardeinstellung, Abbildung \@ref(fig:editor)b) existiert die **Global Environment**, in dem 
 alle gespeicherten Objekte angezeigt werden. Schließlich kann man hier auf die 
 **History** und **Verbindungen**, wie GitHub, zugegriffen werden.
 
