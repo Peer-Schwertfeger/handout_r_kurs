@@ -1,12 +1,13 @@
 fig:unnamed-chunk-2
-fig:unnamed-chunk-3
 fig:unnamed-chunk-4
 fig:unnamed-chunk-5
 fig:unnamed-chunk-6
+fig:unnamed-chunk-7
 fig:editor
 einführung
 was-ist-r-und-warum-sollte-man-r-lernen
 installation
+hinweise-zur-verwendung-des-handouts
 oberfläche
 r-gui
 rstudio
