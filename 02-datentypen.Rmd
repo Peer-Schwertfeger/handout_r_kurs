@@ -207,7 +207,7 @@ knitr::include_graphics("resources/6_reassignmend_part_1.png")
 ```
 
 
-Wenn wir jetzt das Objekt zum Namen `y_test` abfragen, sehen Folgendes: 
+Wenn wir jetzt das Objekt zum Namen `y_test` abfragen, sehen wir Folgendes: 
 
 ```{r}
 y_test
