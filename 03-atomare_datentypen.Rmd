@@ -1,8 +1,3 @@
-```{r, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, cache = FALSE)
-```
-
-
 # Atomare Datentypen 
 
 Datentypen sind die Grundlage einer jeder Programmiersprache und somit essenziell zum Verständnis dieser. Sie dienen dazu, verschiedene Typen unterscheiden. Etwa Zahlen von Buchstaben. Das ist besonders wichtig, da wir mit unterschiedlichen 'Typen' unterschiedliche Operationen ausführen, bzw. nicht ausführen, können. Zum Beispiel können wir mit Zahlen rechnen, mit Buchstaben hingegen nicht. Mit logischen Bedingungen können wir wiederum Wahrheitswerte ermitteln, mit Zahlen hingegen nicht. Zu wissen, welche Eigenschaften die verschiedene Datentypen haben und welche Operationen mit diesen möglich sind, hilft dabei vielen potenziellen Fehlern vorzubeugen und so Frustration zu vermeiden. 
@@ -59,7 +54,7 @@ log(3)
 
 ### Funktionsaufrufe  
 
-Funktionen sind ein wichtiger Teil von R und werden syntaktisch durch eine öffnende und eine schließende Klammer gekennzeichnet, nach diesem Schema: `funktion()`. Gerade haben wir bereits eine Funktion ausgeführt, indem wir `sqrt(9)` aufgerufen haben. Ausführlich werden Funktionen noch in Kapitel 3 besprochen. Ein paar Grundlagen wollen wir hier aber schon einmal einführen:
+Funktionen sind ein wichtiger Teil von R und werden syntaktisch durch eine öffnende und eine schließende Klammer gekennzeichnet, nach diesem Schema: `funktion()`. Gerade haben wir bereits eine Funktion ausgeführt, indem wir `sqrt(9)` aufgerufen haben. Ausführlich werden Funktionen noch in Kapitel \@ref(funktionen) besprochen. Ein paar Grundlagen wollen wir hier aber schon einmal einführen:
 
 Funktionensaufrufe erfolgen in der Regel über das Schema
  
@@ -363,6 +358,8 @@ is.numeric(alter_moni)
 Von dieser Sitzung solltest du folgendes mitgenommen haben: 
 
 - [x] Du solltest verstanden haben, warum man verschiedene Datentypen unterscheidet.
-- [x] Du solltest die drei Grundlegenden weisen Informationen zu repräsentieren nennen können und die dazugehörigen Datentypen.
+- [x] Du solltest die drei grundlegenden weisen Informationen zu repräsentieren nennen können und die dazugehörigen Datentypen.
 - [x] Du solltest verstanden haben, wie man Objekte an einen Namen bindet und warum das nützlich sein kann.
 - [x] Du solltest die elementaren Booleschen (logischen) Operationen in R schreiben können.
+
+

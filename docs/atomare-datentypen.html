@@ -30,7 +30,7 @@
   
   
 <link rel="prev" href="oberfläche.html"/>
-<link rel="next" href="funktionen.html"/>
+<link rel="next" href="strukturierte-datentypen.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -177,7 +177,32 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.6" data-path="atomare-datentypen.html"><a href="atomare-datentypen.html#spezielle-werte"><i class="fa fa-check"></i><b>3.6</b> Spezielle Werte</a></li>
 <li class="chapter" data-level="3.7" data-path="atomare-datentypen.html"><a href="atomare-datentypen.html#prüfe-dich-selbst-1"><i class="fa fa-check"></i><b>3.7</b> Prüfe dich selbst</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="funktionen.html"><a href="funktionen.html"><i class="fa fa-check"></i><b>4</b> Funktionen</a></li>
+<li class="chapter" data-level="4" data-path="strukturierte-datentypen.html"><a href="strukturierte-datentypen.html"><i class="fa fa-check"></i><b>4</b> Strukturierte Datentypen</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="strukturierte-datentypen.html"><a href="strukturierte-datentypen.html#vektoren"><i class="fa fa-check"></i><b>4.1</b> Vektoren</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="strukturierte-datentypen.html"><a href="strukturierte-datentypen.html#abfragen-von-werten-durch-subsetting-von-vektoren"><i class="fa fa-check"></i><b>4.1.1</b> Abfragen von Werten durch Subsetting von Vektoren</a></li>
+<li class="chapter" data-level="4.1.2" data-path="strukturierte-datentypen.html"><a href="strukturierte-datentypen.html#vektorisierte-operationen"><i class="fa fa-check"></i><b>4.1.2</b> Vektorisierte Operationen</a></li>
+<li class="chapter" data-level="4.1.3" data-path="strukturierte-datentypen.html"><a href="strukturierte-datentypen.html#operationen-auf-vektoren"><i class="fa fa-check"></i><b>4.1.3</b> Operationen auf Vektoren</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="strukturierte-datentypen.html"><a href="strukturierte-datentypen.html#matrizen"><i class="fa fa-check"></i><b>4.2</b> Matrizen</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="strukturierte-datentypen.html"><a href="strukturierte-datentypen.html#benennung-von-spalten"><i class="fa fa-check"></i><b>4.2.1</b> Benennung von Spalten</a></li>
+<li class="chapter" data-level="4.2.2" data-path="strukturierte-datentypen.html"><a href="strukturierte-datentypen.html#erzeugung-von-matrizen-aus-vektoren"><i class="fa fa-check"></i><b>4.2.2</b> Erzeugung von Matrizen aus Vektoren</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="strukturierte-datentypen.html"><a href="strukturierte-datentypen.html#listen"><i class="fa fa-check"></i><b>4.3</b> Listen</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="strukturierte-datentypen.html"><a href="strukturierte-datentypen.html#indizierung-von-listen"><i class="fa fa-check"></i><b>4.3.1</b> Indizierung von Listen</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="strukturierte-datentypen.html"><a href="strukturierte-datentypen.html#data-frames"><i class="fa fa-check"></i><b>4.4</b> Data Frames</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="strukturierte-datentypen.html"><a href="strukturierte-datentypen.html#indizierung-von-datentabellen"><i class="fa fa-check"></i><b>4.4.1</b> Indizierung von Datentabellen</a></li>
+<li class="chapter" data-level="4.4.2" data-path="strukturierte-datentypen.html"><a href="strukturierte-datentypen.html#aufname-weiterer-variablenspalten"><i class="fa fa-check"></i><b>4.4.2</b> Aufname weiterer Variablen/Spalten</a></li>
+<li class="chapter" data-level="4.4.3" data-path="strukturierte-datentypen.html"><a href="strukturierte-datentypen.html#operationen-auf-datentabellen"><i class="fa fa-check"></i><b>4.4.3</b> Operationen auf Datentabellen</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="strukturierte-datentypen.html"><a href="strukturierte-datentypen.html#prüfe-dich-selbst-2"><i class="fa fa-check"></i><b>4.5</b> Prüfe dich selbst</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="funktionen.html"><a href="funktionen.html"><i class="fa fa-check"></i><b>5</b> Funktionen</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 </ul>
@@ -318,7 +343,7 @@ Hier nur ein paar wenige relevante Beispiele:</p>
 <pre><code>## [1] 1.098612</code></pre>
 <div id="funktionsaufrufe" class="section level3" number="3.1.1">
 <h3><span class="header-section-number">3.1.1</span> Funktionsaufrufe</h3>
-<p>Funktionen sind ein wichtiger Teil von R und werden syntaktisch durch eine öffnende und eine schließende Klammer gekennzeichnet, nach diesem Schema: <code>funktion()</code>. Gerade haben wir bereits eine Funktion ausgeführt, indem wir <code>sqrt(9)</code> aufgerufen haben. Ausführlich werden Funktionen noch in Kapitel 3 besprochen. Ein paar Grundlagen wollen wir hier aber schon einmal einführen:</p>
+<p>Funktionen sind ein wichtiger Teil von R und werden syntaktisch durch eine öffnende und eine schließende Klammer gekennzeichnet, nach diesem Schema: <code>funktion()</code>. Gerade haben wir bereits eine Funktion ausgeführt, indem wir <code>sqrt(9)</code> aufgerufen haben. Ausführlich werden Funktionen noch in Kapitel <a href="funktionen.html#funktionen">5</a> besprochen. Ein paar Grundlagen wollen wir hier aber schon einmal einführen:</p>
 <p>Funktionensaufrufe erfolgen in der Regel über das Schema</p>
 <p><code>Funktionsname(Argument 1, Argument 2, ...)</code></p>
 <p>Beispiel: Die Funktion</p>
@@ -415,7 +440,11 @@ Berechnungen und Operationen zur Verfügung:</p>
 <p>Wir haben mittlerweile ein paar Objekte im Speicher
 angelegt und an Namen gebunden. Mit <code>ls()</code> kann man diese abrufen:</p>
 <div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="atomare-datentypen.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span>()</span></code></pre></div>
-<pre><code>## [1] &quot;x_1&quot;    &quot;x_test&quot; &quot;y_test&quot;</code></pre>
+<pre><code>##  [1] &quot;alter_moni&quot;         &quot;alter_tom&quot;          &quot;countdown&quot;          &quot;D&quot;                  &quot;df_lineup&quot;         
+##  [6] &quot;DJ_Alter&quot;           &quot;DJ_Geburtsjahr&quot;     &quot;DJ_Name&quot;            &quot;DJ_Vinyl&quot;           &quot;M&quot;                 
+## [11] &quot;name&quot;               &quot;name_bundeskanzler&quot; &quot;p&quot;                  &quot;profil_marie&quot;       &quot;q&quot;                 
+## [16] &quot;theendoftheworld&quot;   &quot;x&quot;                  &quot;x_1&quot;                &quot;x_test&quot;             &quot;y&quot;                 
+## [21] &quot;y_test&quot;             &quot;z&quot;                  &quot;zahl&quot;</code></pre>
 <p>Mit <code>rm()</code> kann man unnötige Objekte über deren Namen entfernen:</p>
 <div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="atomare-datentypen.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(y_test)</span></code></pre></div>
 <p>Wenn ihr gleich alle angelegte, referenzierbare Objekte aus dem Speicher entfernen wollt:</p>
@@ -580,7 +609,7 @@ Wert ‘NA’) durch <code>NaN</code> (not a number)
 <li><input type="checkbox" disabled="" checked="" />
 Du solltest verstanden haben, warum man verschiedene Datentypen unterscheidet.</li>
 <li><input type="checkbox" disabled="" checked="" />
-Du solltest die drei Grundlegenden weisen Informationen zu repräsentieren nennen können und die dazugehörigen Datentypen.</li>
+Du solltest die drei grundlegenden weisen Informationen zu repräsentieren nennen können und die dazugehörigen Datentypen.</li>
 <li><input type="checkbox" disabled="" checked="" />
 Du solltest verstanden haben, wie man Objekte an einen Namen bindet und warum das nützlich sein kann.</li>
 <li><input type="checkbox" disabled="" checked="" />
@@ -601,7 +630,7 @@ Du solltest die elementaren Booleschen (logischen) Operationen in R schreiben k�
         </div>
       </div>
 <a href="oberfläche.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="funktionen.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="strukturierte-datentypen.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -632,7 +661,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/peer-schwertfeger/handout_r_kurs/edit/master/02-datentypen.Rmd",
+"link": "https://github.com/peer-schwertfeger/handout_r_kurs/edit/master/03-atomare_datentypen.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -640,7 +669,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/peer-schwertfeger/handout_r_kurs/blob/master/02-datentypen.Rmd",
+"link": "https://github.com/peer-schwertfeger/handout_r_kurs/blob/master/03-atomare_datentypen.Rmd",
 "text": null
 },
 "download": null,
