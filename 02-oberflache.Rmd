@@ -51,7 +51,7 @@ Nachdem Code hier eingetippt wurde, wird die Befehlszeile mit der Taste
 
 ### Script Editor
 
-```{r, echo=FALSE, out.width='80%', fig.align='center'}
+```{r, echo=FALSE, out.width='80%', fig.align='center',fig.cap="Script Editor"}
 knitr::include_graphics("resources/editor.png")
 ```
 

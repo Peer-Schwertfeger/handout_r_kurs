@@ -3,7 +3,9 @@ fig:unnamed-chunk-4
 fig:unnamed-chunk-5
 fig:unnamed-chunk-6
 fig:unnamed-chunk-7
+fig:unnamed-chunk-8
 fig:editor
+fig:unnamed-chunk-80
 einführung
 was-ist-r-und-warum-sollte-man-r-lernen
 installation
@@ -46,3 +48,10 @@ aufname-weiterer-variablenspalten
 operationen-auf-datentabellen
 prüfe-dich-selbst-2
 funktionen
+eigenschaften
+aufbau
+verschachtelungen
+pipes
+default-werte
+help-fenster
+prüfe-dich-selbst-3
