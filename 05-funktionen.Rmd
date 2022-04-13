@@ -107,8 +107,7 @@ Pipes funktionieren analog zu geschachtelten Funktionen:
 - usw. 
 
 ```{r echo=FALSE, fig.height=2}
-library(needs)
-needs(DiagrammeR)
+library(DiagrammeR)
 
 mermaid("
 graph LR;

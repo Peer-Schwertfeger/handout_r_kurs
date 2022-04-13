@@ -134,6 +134,13 @@ atomare Datentypen definiert sind als vektorisierte Operation, d.h. elementweise
 
 Der letzte Ausdruck wertet elementweise aus, ob das jeweilige Alter größer als 21 ist und bildet das Ergebnis anschließend auf einen logischen Vektor mit korrespondierender Länge ab.
 
+Zur Illustration der folgenden Beispiel brauchen wir noch einen weiteren Vektor, nämlich das Geburtsjahr der Personen:
+
+```{r}
+  DJ_Geburtsjahr <- 2022 - DJ_Alter
+  DJ_Geburtsjahr
+```
+
 ### Operationen auf Vektoren
 
 Abhängig vom Datentyp eines Vektors existieren verschiedene
@@ -213,11 +220,13 @@ M[ ,"B"]
 Zwei Vektoren können mit der Funktion `cbind()` in eine Matrix überführt werden.
 
 ```{r}
-D <- cbind(DJ_Name,DJ_Vinyl)
+D <- cbind(DJ_Alter,DJ_Geburtsjahr)
 D
 ```
 
 Analog können mit `rbind()` zwei Vektoren als Zeilen zu einer Matrix gebunden werden.
+
+**Achtung!** Achtet darauf, dass die zwei Vektoren den gleichen atomaren Datentypen haben, sonst wird der "höherwertigere" der beiden umgewandelt. Wenn ihr zum Beispiel einen `character` Vector und einen vom Typ `logical` mit der Funktion `cbind()` verbindet, erhaltet ihr eine Matrix mit *ausschließlich* `character` Werten.
 
 ## Listen
 
@@ -301,7 +310,7 @@ Diese können wir ganz einfach aus Vektoren erzeugen:
  
 ### Aufname weiterer Variablen/Spalten
  
- Analog zu Matrizen können wir mit der Funktion `cbind()` Vektoren als Spalten unseres Data Frames aufnehmen.
+ Analog zu Matrizen können wir mit der Funktion `cbind()` Vektoren als Spalten eines bereits bestehenden Data Frames aufnehmen.
 
 
 ```{r}
@@ -310,12 +319,6 @@ Diese können wir ganz einfach aus Vektoren erzeugen:
 ```
 
 Alternativ können wir eine Spalte anwählen, welche es noch nicht gibt und anschließend diese an einen Vektor binden.
-
-Zur Illustration brauchen wir noch einen weiteren Vektor:
-
-```{r}
-  DJ_Geburtsjahr <- 2022 - DJ_Alter
-```
  
 ```{r}
   df_lineup$Geburtsjahr <- DJ_Geburtsjahr

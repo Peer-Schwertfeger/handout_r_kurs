@@ -9,12 +9,12 @@ Datentyp              Beschreibung                            Beispiel
 -------------------   -------------------------------------  ----------
 integer               ganze Zahlen                            -2L       
 numeric               reelle Zahlen                           5.2456   
-logic                 logische Werte                          TRUE     
+logical               logische Werte                          TRUE     
 character             Zeichenfolge                           "Mexico" 
 NA,NULL,NaN           Unbestimmt, Leer, Undefiniert                    
 Inf                   Unendlich                                        
 
-Die numerischen Datentypen `integer` und `numeric` erlauben es uns numerische Informationen zu repräsentieren. Mit dem Datentyp `logic` können wir logische Informationen repräsentieren. Um symbolische Informationen zu repräsentieren, verwenden wir den Datentyp `character`. Mit numerischen-, logischen- und symbolischen Informationen ist es bereits möglich eine Vielzahl von Sachverhalten auszudrücken. Was dies sein kann, wollen wir uns im Folgenden anschauen.
+Die numerischen Datentypen `integer` und `numeric` erlauben es uns numerische Informationen zu repräsentieren. Mit dem Datentyp `logical` können wir logische Informationen repräsentieren. Um symbolische Informationen zu repräsentieren, verwenden wir den Datentyp `character`. Mit numerischen-, logischen- und symbolischen Informationen ist es bereits möglich eine Vielzahl von Sachverhalten auszudrücken. Was dies sein kann, wollen wir uns im Folgenden anschauen.
 
 ## Arithmetische Grundoperationen und Basisfunktionen
 
