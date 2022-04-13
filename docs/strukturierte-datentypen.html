@@ -387,7 +387,7 @@ atomare Datentypen definiert sind als vektorisierte Operation, d.h. elementweise
 <div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb96-1"><a href="strukturierte-datentypen.html#cb96-1" aria-hidden="true" tabindex="-1"></a>  DJ_Alter <span class="sc">&gt;</span> <span class="dv">21</span></span></code></pre></div>
 <pre><code>## [1]  TRUE  TRUE  TRUE  TRUE FALSE</code></pre>
 <p>Der letzte Ausdruck wertet elementweise aus, ob das jeweilige Alter größer als 21 ist und bildet das Ergebnis anschließend auf einen logischen Vektor mit korrespondierender Länge ab.</p>
-<p>Zur Illustration der folgenden Beispiel brauchen wir noch einen weiteren Vektor, nämlich das Geburtsjahr der Personen:</p>
+<p>Zur Illustration der folgenden Beispiele brauchen wir noch einen weiteren numerischen Vektor. Da wir jetzt wissen, wie man vektorisierte Operation vollführt, können wir ganz einfach einen Vektor mit den annäherenden Geburtsjahren der Personen aus deren Alter berechnen:</p>
 <div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="strukturierte-datentypen.html#cb98-1" aria-hidden="true" tabindex="-1"></a>  DJ_Geburtsjahr <span class="ot">&lt;-</span> <span class="dv">2022</span> <span class="sc">-</span> DJ_Alter</span>
 <span id="cb98-2"><a href="strukturierte-datentypen.html#cb98-2" aria-hidden="true" tabindex="-1"></a>  DJ_Geburtsjahr</span></code></pre></div>
 <pre><code>## [1] 1988 1977 1994 1997 2002</code></pre>
