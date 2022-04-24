@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Kapitel 1 Einführung | Handout für R Grundkurs</title>
   <meta name="description" content="Kapitel 1 Einführung | Handout für R Grundkurs" />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Kapitel 1 Einführung | Handout für R Grundkurs" />
   <meta property="og:type" content="book" />
-  
   
   
   
@@ -31,7 +30,6 @@
   
 <link rel="prev" href="hinweise-zur-verwendung-des-handouts.html"/>
 <link rel="next" href="oberfläche.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -49,8 +47,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
 <script src="libs/d3-3.3.8/d3.min.js"></script>
 <script src="libs/dagre-0.4.0/dagre-d3.min.js"></script>
@@ -58,7 +57,7 @@
 <script src="libs/mermaid-0.3.0/dist/mermaid.slim.min.js"></script>
 <link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
 <script src="libs/chromatography-0.1/chromatography.js"></script>
-<script src="libs/DiagrammeR-binding-1.0.6.1/DiagrammeR.js"></script>
+<script src="libs/DiagrammeR-binding-1.0.9/DiagrammeR.js"></script>
 
 
 <style type="text/css">
@@ -220,6 +219,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.6" data-path="funktionen.html"><a href="funktionen.html#help-fenster"><i class="fa fa-check"></i><b>5.6</b> Help Fenster</a></li>
 <li class="chapter" data-level="5.7" data-path="funktionen.html"><a href="funktionen.html#prüfe-dich-selbst-3"><i class="fa fa-check"></i><b>5.7</b> Prüfe dich selbst</a></li>
 </ul></li>
+<li class="chapter" data-level="6" data-path="packages.html"><a href="packages.html"><i class="fa fa-check"></i><b>6</b> Packages</a></li>
+<li class="chapter" data-level="7" data-path="dateimanagement.html"><a href="dateimanagement.html"><i class="fa fa-check"></i><b>7</b> Dateimanagement</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="dateimanagement.html"><a href="dateimanagement.html#absolute-und-relative-datenpfade-exkurs"><i class="fa fa-check"></i><b>7.1</b> Absolute und relative Datenpfade (Exkurs)</a></li>
+<li class="chapter" data-level="7.2" data-path="dateimanagement.html"><a href="dateimanagement.html#r-projects"><i class="fa fa-check"></i><b>7.2</b> R Projects</a></li>
+<li class="chapter" data-level="7.3" data-path="dateimanagement.html"><a href="dateimanagement.html#dateien-einlesen"><i class="fa fa-check"></i><b>7.3</b> Dateien einlesen</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="dateimanagement.html"><a href="dateimanagement.html#r-interne-dateien"><i class="fa fa-check"></i><b>7.3.1</b> R interne Dateien</a></li>
+</ul></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 </ul>
@@ -239,16 +248,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="einführung" class="section level1" number="1">
-<h1><span class="header-section-number">Kapitel 1</span> Einführung</h1>
+<div id="einführung" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">Kapitel 1</span> Einführung<a href="einführung.html#einführung" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-3"></span>
 <img src="resources/R_logo.png" alt="R Logo (https://www.r-project.org/logo/)" width="30%" />
 <p class="caption">
 Abb. 1.1: R Logo (<a href="https://www.r-project.org/logo/" class="uri">https://www.r-project.org/logo/</a>)
 </p>
 </div>
-<div id="was-ist-r-und-warum-sollte-man-r-lernen" class="section level2" number="1.1">
-<h2><span class="header-section-number">1.1</span> Was ist R und warum sollte man R lernen?</h2>
+<div id="was-ist-r-und-warum-sollte-man-r-lernen" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> Was ist R und warum sollte man R lernen?<a href="einführung.html#was-ist-r-und-warum-sollte-man-r-lernen" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>R ist eine freie Programmiersprache, die in erster Linie für statistische Analysen konzipiert wurde. Durch ihre große Community (siehe <a href="https://stackoverflow.com/questions">Stack Overflow</a> oder <a href="https://www.r-bloggers.com">RBlogger</a>) und ihre ständige Weiterentwicklung durch sogenannte <em>Packages</em>, ist der Funktionsumfang von R praktisch unbegrenzt.</p>
 <p>Neben den <em>klassischen</em> Funktionen statistischer Software (Datenaufbereitung, Analysen, Graphikerstellung) sind z.B. folgende Anwendungen möglich:</p>
 <ul>
@@ -273,8 +282,8 @@ R zum Goldstandard in der akademischen Welt und in vielen Bereichen der Wirtscha
 <li>Internationale Community (<a href="https://stackoverflow.com/questions/tagged/r">Stack Overflow</a>, <a href="https://www.r-bloggers.com">RBloggers</a> etc.)</li>
 </ol>
 </div>
-<div id="installation" class="section level2" number="1.2">
-<h2><span class="header-section-number">1.2</span> Installation</h2>
+<div id="installation" class="section level2 hasAnchor" number="1.2">
+<h2><span class="header-section-number">1.2</span> Installation<a href="einführung.html#installation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Zunächst muss unser Computer R “lernen”.</p>
 <p>Um R zu installieren, gehe auf die entsprechende <a href="https://cran.r-project.org">Cran Website</a>. Wähle dein Betriebssystem aus und folge
 den Anweisungen auf der Website.</p>

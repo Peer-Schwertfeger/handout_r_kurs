@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Kapitel 2 Oberfläche | Handout für R Grundkurs</title>
-  <meta name="description" content="Kapitel 2 Oberfläche | Handout für R Grundkurs" />
+  <title>Kapitel 6 Packages | Handout für R Grundkurs</title>
+  <meta name="description" content="Kapitel 6 Packages | Handout für R Grundkurs" />
   <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Kapitel 2 Oberfläche | Handout für R Grundkurs" />
+  <meta property="og:title" content="Kapitel 6 Packages | Handout für R Grundkurs" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Kapitel 2 Oberfläche | Handout für R Grundkurs" />
+  <meta name="twitter:title" content="Kapitel 6 Packages | Handout für R Grundkurs" />
   
   
   
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="einführung.html"/>
-<link rel="next" href="atomare-datentypen.html"/>
+<link rel="prev" href="funktionen.html"/>
+<link rel="next" href="dateimanagement.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -248,126 +248,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="oberfläche" class="section level1 hasAnchor" number="2">
-<h1><span class="header-section-number">Kapitel 2</span> Oberfläche<a href="oberfläche.html#oberfläche" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="r-gui" class="section level2 hasAnchor" number="2.1">
-<h2><span class="header-section-number">2.1</span> R GUI<a href="oberfläche.html#r-gui" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Mit der Installation von R wird gleichzeitig ein <em>Graphical User Interface</em> (GUI)
-mitinstalliert. Hier können wir bereits R Code eingeben und mit <code>Enter</code> an den
-Computer übergeben. In der nächsten Zeile wird die Antwort vom Computer an uns
-zurückgegeben.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-4"></span>
-<img src="resources/GUI.png" alt="R GUI" width="80%" />
-<p class="caption">
-Abb. 2.1: R GUI
-</p>
-</div>
-<p>Diese Oberfläche ist jedoch wenig “komfortabel”. Sie bietet keine zusätzlichen Editoren oder Fenster, um z.B. die gespeicherten Objekte oder Graphiken anzuzeigen.</p>
-</div>
-<div id="rstudio" class="section level2 hasAnchor" number="2.2">
-<h2><span class="header-section-number">2.2</span> RStudio<a href="oberfläche.html#rstudio" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-5"></span>
-<img src="resources/RStudio.png" alt="RStudio Logo (https://www.rstudio.com/about/logos/)" width="60%" />
-<p class="caption">
-Abb. 2.2: RStudio Logo (<a href="https://www.rstudio.com/about/logos/" class="uri">https://www.rstudio.com/about/logos/</a>)
-</p>
-</div>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-6"></span>
-<img src="resources/interface.png" alt="RStudio Interface" width="80%" />
-<p class="caption">
-Abb. 2.3: RStudio Interface
-</p>
-</div>
-<p>RStudio bietet eine nutzer:innenfreundliche (und freie) Alternative für die Nutzung von R. Hier sind zusätzliche Editoren und Übersichten enthalten. Zu nennen ist beispielsweise:</p>
-<ul>
-<li>Script-Editor</li>
-<li>Übersicht über Objekte in globaler Umgebung</li>
-<li>Übersicht über Packages</li>
-<li>Einfache Dateienhandhabung durch Projects</li>
-<li>u.v.m.</li>
-</ul>
-<p>Das Interface von RStudio besteht aus mehreren Fenstern.</p>
-<div id="console" class="section level3 hasAnchor" number="2.2.1">
-<h3><span class="header-section-number">2.2.1</span> Console<a href="oberfläche.html#console" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-7"></span>
-<img src="resources/console.png" alt="Console" width="80%" />
-<p class="caption">
-Abb. 2.4: Console
-</p>
-</div>
-<p>Die R Console dient zur direkten Übergabe von Ausdrücken bzw. Funktionen an R
-und ist identisch mit der Anzeige in der R GUI. Diese eignet sich für für
-kleine Tasks bzw. Tests. Das Ergebnis wird direkt unterhalb des Befehls angezeigt.
-Außerderm werden Ergebnisse aus den Scripten, die keine Graphiken sind,
-hier angezeigt.</p>
-<p>Nachdem Code hier eingetippt wurde, wird die Befehlszeile mit der Taste
-<code>ENTER</code> ausgeführt.</p>
-</div>
-<div id="script-editor" class="section level3 hasAnchor" number="2.2.2">
-<h3><span class="header-section-number">2.2.2</span> Script Editor<a href="oberfläche.html#script-editor" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-8"></span>
-<img src="resources/editor.png" alt="Script Editor" width="80%" />
-<p class="caption">
-Abb. 2.5: Script Editor
-</p>
-</div>
-<p>In der Console kann euer Code langfristig nicht gespeichert werden. Sogenannte R
-Scripte ermöglichen euch, euren Code zu speichern und nacheinander auszuführen.</p>
-<p>Der entsprechende Editor muss zunächst händisch geöffnet werden:</p>
-<p><code>File</code> <span class="math inline">\(\rightarrow\)</span> <code>New File</code> <span class="math inline">\(\rightarrow\)</span> <code>R Script</code></p>
-<p>Nachdem Code geschrieben wurde, kann der Code mit folgender Tastenkombination
-ausgeführt werden:</p>
-<p><code>strg + ENTER</code> (Win) bzw. <code>command + ENTER</code> (Mac)</p>
-<p>Hierzu genügt es, wenn sich der Cursor in <strong>einer</strong> der Zeilen der Befehlssequenz
-befindet. Sollen mehrere Befehlssequenzen ausgeführt werden, müssen diese vorher
-markiert werden.</p>
-<p>Mit <code>#</code> lassen sich Kommentare in das Script schreiben. Zeilen, in denen dieses
-Zeichen steht, werden von R ignoriert und nicht ausgeführt.</p>
-</div>
-<div id="file-editor-und-environment" class="section level3 hasAnchor" number="2.2.3">
-<h3><span class="header-section-number">2.2.3</span> File-Editor und Environment<a href="oberfläche.html#file-editor-und-environment" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:editor"></span>
-<img src="resources/files.png" alt="File-Editor und Environment-Oberfläche" width="49%" height="20%" /><img src="resources/envi.png" alt="File-Editor und Environment-Oberfläche" width="49%" height="20%" />
-<p class="caption">
-Abb. 2.6: File-Editor und Environment-Oberfläche
-</p>
-</div>
-<p>Zusätzlich zu der Console und dem Skript-Editor bietet RStudio weitere Fenster,
-die die Arbeit mit R vereinfachen sollen.</p>
-<p>Das Fenster unten rechts (Standardeinstellung, Abbildung <a href="oberfläche.html#fig:editor">2.6</a>a) beinhaltet einen <strong>File-Editor</strong>
-(ähnlich zum File Browser (Win) bzw. Finder (Mac)). Hier können Dateien und
-Verzeichnisstrukturen angesehen und bearbeitet werden (neuer Ordner, Umbenennen
-von Dateien). Außerdem werden hier <strong>Graphiken angezeigt</strong>, wenn diese über Code in
-Scripten oder in der Console erzeugt werden. Des Weiteren gibt es hier eine
-<strong>Übersicht über Packages</strong> und das <strong>Help</strong> Fenster.</p>
-<p>Oben rechts (Standardeinstellung, Abbildung <a href="oberfläche.html#fig:editor">2.6</a>b) existiert die <strong>Global Environment</strong>, in dem
-alle gespeicherten Objekte angezeigt werden. Schließlich kann man hier auf die
-<strong>History</strong> und <strong>Verbindungen</strong>, wie GitHub, zugegriffen werden.</p>
-</div>
-</div>
-<div id="prüfe-dich-selbst" class="section level2 hasAnchor" number="2.3">
-<h2><span class="header-section-number">2.3</span> Prüfe dich selbst<a href="oberfläche.html#prüfe-dich-selbst" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Von dieser Sitzung solltest du folgendes mitgenommen haben:</p>
-<ul class="task-list">
-<li><input type="checkbox" disabled="" checked="" />
-Du solltest die Wesentliche Funktionsweise von R verstanden haben.</li>
-<li><input type="checkbox" disabled="" checked="" />
-Du solltest den Aufbau von RStudio kennen.</li>
-<li><input type="checkbox" disabled="" checked="" />
-Du solltest wissen, was ein Script ist und wie es geöffnet werden kann.</li>
-<li><input type="checkbox" disabled="" checked="" />
-Du solltest wissen, wie Befehlssequenzen in der Console und in einem Script ausgeführt werden.</li>
-</ul>
+<div id="packages" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">Kapitel 6</span> Packages<a href="packages.html#packages" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 
-</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="einführung.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="atomare-datentypen.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="funktionen.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="dateimanagement.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -398,7 +289,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/peer-schwertfeger/handout_r_kurs/edit/master/02-oberflache.Rmd",
+"link": "https://github.com/peer-schwertfeger/handout_r_kurs/edit/master/06-Packages.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -406,7 +297,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/peer-schwertfeger/handout_r_kurs/blob/master/02-oberflache.Rmd",
+"link": "https://github.com/peer-schwertfeger/handout_r_kurs/blob/master/06-Packages.Rmd",
 "text": null
 },
 "download": null,

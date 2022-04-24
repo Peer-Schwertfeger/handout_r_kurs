@@ -1,0 +1,72 @@
+# Dateimanagement
+
+RStudio bietet intern bereits ein gutes Tool, um Dateien auf der Festplatte zu verarbeiten. Dateien lassen sich hier *löschen*, *umbenennen*, *neuen Ordnern hinzufügen*, *verschieben* oder *kopieren.*
+
+## Absolute und relative Datenpfade (Exkurs)
+
+Um Dateien in R zu laden, muss zumeist ein Datenpfad angegeben werden, der zu der zu ladenden Datei führt. Der Datenpfad ist dabei zunächst entsprechen lang:
+
+```{r eval=FALSE}
+df_example <- read.csv(file = "/Users/username/Documents/GitHub/r-kurs/sitzung/data/strata.csv")
+```
+
+Diese langen Datenpfade können mithilfe von *Working Directories* (WD) gelöst werden. Diese können mit der Funktion `setwd()` eingerichtet werden.
+
+```{r eval = FALSE}
+setwd(dir = "/Users/username/Documents/GitHub/r-kurs/sitzung")
+```
+
+Im Zweifel kann die WD dann mithilfe von `getwd()` abgerufen werden.
+
+Wurde eine WD festgelegt, kann der Datenpfad nun bei dem Ort beginnen, der über die `setwd()` Funktion festgelegt wurde.
+
+```{r eval=FALSE}
+df_example <- read.csv(file = "data/strata.csv")
+```
+
+Der Nachteil dieser Herangehensweise ist, dass die WD global für alle Arbeitsschritte festgelegt wird. Sollen aber WDs für einzelne "Projekte" festgelegt werden, **sollten** RProjects genutzt werden.
+
+## R Projects
+
+Um ein R Project anzulegen, sollten folgende Schritte befolgt werden:
+
+1. Projekt-Ordner anlegen (Name des Ordners wird zum Projekt-Namen)
+
+2. In RStudio über `Projects` (oben rechts) `New Project...` wählen
+
+3. `New Project` $\Rightarrow$ `Existing Directory` $\Rightarrow$ Erstellten Ordner aus 1. wählen $\Rightarrow$ `Create`
+
+Ein Projekt kann dann immer über die `.RProj`-Datei geöffnet werden.
+
+Vorteile von Projekten:
+
+- Wechsel von Projekten einfach möglich (WD muss nicht immer neu festgelegt werden)
+- Code wird transportabel
+- Deutlich übersichtlicher als lose Ordnerstruktur
+- RHistory wird projektbezogen gespeichert
+
+## Dateien einlesen
+
+In R sind grundsätzlich alle Datei-Typen einlesbar bzw. verarbeitbar. Hierunter zählen z.B.
+
+Datenformat | File-Extension    | Bemerkung
+----------- | --------------    | --------
+ RData/RDS  | .Rda bzw. .Rds    | native R-Datenformate
+ CSV        | .csv              | Comma-Seperated Values
+ Text/ASCII | .txt              | Reines Textfile
+ XLS        | .xls bzw. .xlsx   | EXCEL-Datenformat
+ SAV        | .sav              | SPSS-Datenformat
+ DTA        | .dta              | Stata-Datenformat
+ R          | .R                | Speicherung als R-Skript
+ 
+R interne Dateien, sowie verschiedene Text-Formate (.csv, .tsv, .txt, ...) können bereits mit R Base eingelesen werden. Komplexere Datenformate (Excel, Stata, SPSS) benötigen bestimmte Packages.
+
+### R interne Dateien
+
+
+ 
+ 
+
+
+
+

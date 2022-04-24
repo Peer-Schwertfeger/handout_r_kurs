@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Kapitel 2 Oberfläche | Handout für R Grundkurs</title>
-  <meta name="description" content="Kapitel 2 Oberfläche | Handout für R Grundkurs" />
+  <title>Kapitel 7 Dateimanagement | Handout für R Grundkurs</title>
+  <meta name="description" content="Kapitel 7 Dateimanagement | Handout für R Grundkurs" />
   <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Kapitel 2 Oberfläche | Handout für R Grundkurs" />
+  <meta property="og:title" content="Kapitel 7 Dateimanagement | Handout für R Grundkurs" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Kapitel 2 Oberfläche | Handout für R Grundkurs" />
+  <meta name="twitter:title" content="Kapitel 7 Dateimanagement | Handout für R Grundkurs" />
   
   
   
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="einführung.html"/>
-<link rel="next" href="atomare-datentypen.html"/>
+<link rel="prev" href="packages.html"/>
+
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -248,126 +248,108 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="oberfläche" class="section level1 hasAnchor" number="2">
-<h1><span class="header-section-number">Kapitel 2</span> Oberfläche<a href="oberfläche.html#oberfläche" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="r-gui" class="section level2 hasAnchor" number="2.1">
-<h2><span class="header-section-number">2.1</span> R GUI<a href="oberfläche.html#r-gui" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Mit der Installation von R wird gleichzeitig ein <em>Graphical User Interface</em> (GUI)
-mitinstalliert. Hier können wir bereits R Code eingeben und mit <code>Enter</code> an den
-Computer übergeben. In der nächsten Zeile wird die Antwort vom Computer an uns
-zurückgegeben.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-4"></span>
-<img src="resources/GUI.png" alt="R GUI" width="80%" />
-<p class="caption">
-Abb. 2.1: R GUI
-</p>
+<div id="dateimanagement" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">Kapitel 7</span> Dateimanagement<a href="dateimanagement.html#dateimanagement" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>RStudio bietet intern bereits ein gutes Tool, um Dateien auf der Festplatte zu verarbeiten. Dateien lassen sich hier <em>löschen</em>, <em>umbenennen</em>, <em>neuen Ordnern hinzufügen</em>, <em>verschieben</em> oder <em>kopieren.</em></p>
+<div id="absolute-und-relative-datenpfade-exkurs" class="section level2 hasAnchor" number="7.1">
+<h2><span class="header-section-number">7.1</span> Absolute und relative Datenpfade (Exkurs)<a href="dateimanagement.html#absolute-und-relative-datenpfade-exkurs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Um Dateien in R zu laden, muss zumeist ein Datenpfad angegeben werden, der zu der zu ladenden Datei führt. Der Datenpfad ist dabei zunächst entsprechen lang:</p>
+<div class="sourceCode" id="cb173"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb173-1"><a href="dateimanagement.html#cb173-1" aria-hidden="true" tabindex="-1"></a>df_example <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">&quot;/Users/username/Documents/GitHub/r-kurs/sitzung/data/strata.csv&quot;</span>)</span></code></pre></div>
+<p>Diese langen Datenpfade können mithilfe von <em>Working Directories</em> (WD) gelöst werden. Diese können mit der Funktion <code>setwd()</code> eingerichtet werden.</p>
+<div class="sourceCode" id="cb174"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb174-1"><a href="dateimanagement.html#cb174-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="at">dir =</span> <span class="st">&quot;/Users/username/Documents/GitHub/r-kurs/sitzung&quot;</span>)</span></code></pre></div>
+<p>Im Zweifel kann die WD dann mithilfe von <code>getwd()</code> abgerufen werden.</p>
+<p>Wurde eine WD festgelegt, kann der Datenpfad nun bei dem Ort beginnen, der über die <code>setwd()</code> Funktion festgelegt wurde.</p>
+<div class="sourceCode" id="cb175"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb175-1"><a href="dateimanagement.html#cb175-1" aria-hidden="true" tabindex="-1"></a>df_example <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">&quot;data/strata.csv&quot;</span>)</span></code></pre></div>
+<p>Der Nachteil dieser Herangehensweise ist, dass die WD global für alle Arbeitsschritte festgelegt wird. Sollen aber WDs für einzelne “Projekte” festgelegt werden, <strong>sollten</strong> RProjects genutzt werden.</p>
 </div>
-<p>Diese Oberfläche ist jedoch wenig “komfortabel”. Sie bietet keine zusätzlichen Editoren oder Fenster, um z.B. die gespeicherten Objekte oder Graphiken anzuzeigen.</p>
-</div>
-<div id="rstudio" class="section level2 hasAnchor" number="2.2">
-<h2><span class="header-section-number">2.2</span> RStudio<a href="oberfläche.html#rstudio" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-5"></span>
-<img src="resources/RStudio.png" alt="RStudio Logo (https://www.rstudio.com/about/logos/)" width="60%" />
-<p class="caption">
-Abb. 2.2: RStudio Logo (<a href="https://www.rstudio.com/about/logos/" class="uri">https://www.rstudio.com/about/logos/</a>)
-</p>
-</div>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-6"></span>
-<img src="resources/interface.png" alt="RStudio Interface" width="80%" />
-<p class="caption">
-Abb. 2.3: RStudio Interface
-</p>
-</div>
-<p>RStudio bietet eine nutzer:innenfreundliche (und freie) Alternative für die Nutzung von R. Hier sind zusätzliche Editoren und Übersichten enthalten. Zu nennen ist beispielsweise:</p>
+<div id="r-projects" class="section level2 hasAnchor" number="7.2">
+<h2><span class="header-section-number">7.2</span> R Projects<a href="dateimanagement.html#r-projects" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Um ein R Project anzulegen, sollten folgende Schritte befolgt werden:</p>
+<ol style="list-style-type: decimal">
+<li><p>Projekt-Ordner anlegen (Name des Ordners wird zum Projekt-Namen)</p></li>
+<li><p>In RStudio über <code>Projects</code> (oben rechts) <code>New Project...</code> wählen</p></li>
+<li><p><code>New Project</code> <span class="math inline">\(\Rightarrow\)</span> <code>Existing Directory</code> <span class="math inline">\(\Rightarrow\)</span> Erstellten Ordner aus 1. wählen <span class="math inline">\(\Rightarrow\)</span> <code>Create</code></p></li>
+</ol>
+<p>Ein Projekt kann dann immer über die <code>.RProj</code>-Datei geöffnet werden.</p>
+<p>Vorteile von Projekten:</p>
 <ul>
-<li>Script-Editor</li>
-<li>Übersicht über Objekte in globaler Umgebung</li>
-<li>Übersicht über Packages</li>
-<li>Einfache Dateienhandhabung durch Projects</li>
-<li>u.v.m.</li>
+<li>Wechsel von Projekten einfach möglich (WD muss nicht immer neu festgelegt werden)</li>
+<li>Code wird transportabel</li>
+<li>Deutlich übersichtlicher als lose Ordnerstruktur</li>
+<li>RHistory wird projektbezogen gespeichert</li>
 </ul>
-<p>Das Interface von RStudio besteht aus mehreren Fenstern.</p>
-<div id="console" class="section level3 hasAnchor" number="2.2.1">
-<h3><span class="header-section-number">2.2.1</span> Console<a href="oberfläche.html#console" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-7"></span>
-<img src="resources/console.png" alt="Console" width="80%" />
-<p class="caption">
-Abb. 2.4: Console
-</p>
 </div>
-<p>Die R Console dient zur direkten Übergabe von Ausdrücken bzw. Funktionen an R
-und ist identisch mit der Anzeige in der R GUI. Diese eignet sich für für
-kleine Tasks bzw. Tests. Das Ergebnis wird direkt unterhalb des Befehls angezeigt.
-Außerderm werden Ergebnisse aus den Scripten, die keine Graphiken sind,
-hier angezeigt.</p>
-<p>Nachdem Code hier eingetippt wurde, wird die Befehlszeile mit der Taste
-<code>ENTER</code> ausgeführt.</p>
-</div>
-<div id="script-editor" class="section level3 hasAnchor" number="2.2.2">
-<h3><span class="header-section-number">2.2.2</span> Script Editor<a href="oberfläche.html#script-editor" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-8"></span>
-<img src="resources/editor.png" alt="Script Editor" width="80%" />
-<p class="caption">
-Abb. 2.5: Script Editor
-</p>
-</div>
-<p>In der Console kann euer Code langfristig nicht gespeichert werden. Sogenannte R
-Scripte ermöglichen euch, euren Code zu speichern und nacheinander auszuführen.</p>
-<p>Der entsprechende Editor muss zunächst händisch geöffnet werden:</p>
-<p><code>File</code> <span class="math inline">\(\rightarrow\)</span> <code>New File</code> <span class="math inline">\(\rightarrow\)</span> <code>R Script</code></p>
-<p>Nachdem Code geschrieben wurde, kann der Code mit folgender Tastenkombination
-ausgeführt werden:</p>
-<p><code>strg + ENTER</code> (Win) bzw. <code>command + ENTER</code> (Mac)</p>
-<p>Hierzu genügt es, wenn sich der Cursor in <strong>einer</strong> der Zeilen der Befehlssequenz
-befindet. Sollen mehrere Befehlssequenzen ausgeführt werden, müssen diese vorher
-markiert werden.</p>
-<p>Mit <code>#</code> lassen sich Kommentare in das Script schreiben. Zeilen, in denen dieses
-Zeichen steht, werden von R ignoriert und nicht ausgeführt.</p>
-</div>
-<div id="file-editor-und-environment" class="section level3 hasAnchor" number="2.2.3">
-<h3><span class="header-section-number">2.2.3</span> File-Editor und Environment<a href="oberfläche.html#file-editor-und-environment" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:editor"></span>
-<img src="resources/files.png" alt="File-Editor und Environment-Oberfläche" width="49%" height="20%" /><img src="resources/envi.png" alt="File-Editor und Environment-Oberfläche" width="49%" height="20%" />
-<p class="caption">
-Abb. 2.6: File-Editor und Environment-Oberfläche
-</p>
-</div>
-<p>Zusätzlich zu der Console und dem Skript-Editor bietet RStudio weitere Fenster,
-die die Arbeit mit R vereinfachen sollen.</p>
-<p>Das Fenster unten rechts (Standardeinstellung, Abbildung <a href="oberfläche.html#fig:editor">2.6</a>a) beinhaltet einen <strong>File-Editor</strong>
-(ähnlich zum File Browser (Win) bzw. Finder (Mac)). Hier können Dateien und
-Verzeichnisstrukturen angesehen und bearbeitet werden (neuer Ordner, Umbenennen
-von Dateien). Außerdem werden hier <strong>Graphiken angezeigt</strong>, wenn diese über Code in
-Scripten oder in der Console erzeugt werden. Des Weiteren gibt es hier eine
-<strong>Übersicht über Packages</strong> und das <strong>Help</strong> Fenster.</p>
-<p>Oben rechts (Standardeinstellung, Abbildung <a href="oberfläche.html#fig:editor">2.6</a>b) existiert die <strong>Global Environment</strong>, in dem
-alle gespeicherten Objekte angezeigt werden. Schließlich kann man hier auf die
-<strong>History</strong> und <strong>Verbindungen</strong>, wie GitHub, zugegriffen werden.</p>
-</div>
-</div>
-<div id="prüfe-dich-selbst" class="section level2 hasAnchor" number="2.3">
-<h2><span class="header-section-number">2.3</span> Prüfe dich selbst<a href="oberfläche.html#prüfe-dich-selbst" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Von dieser Sitzung solltest du folgendes mitgenommen haben:</p>
-<ul class="task-list">
-<li><input type="checkbox" disabled="" checked="" />
-Du solltest die Wesentliche Funktionsweise von R verstanden haben.</li>
-<li><input type="checkbox" disabled="" checked="" />
-Du solltest den Aufbau von RStudio kennen.</li>
-<li><input type="checkbox" disabled="" checked="" />
-Du solltest wissen, was ein Script ist und wie es geöffnet werden kann.</li>
-<li><input type="checkbox" disabled="" checked="" />
-Du solltest wissen, wie Befehlssequenzen in der Console und in einem Script ausgeführt werden.</li>
-</ul>
+<div id="dateien-einlesen" class="section level2 hasAnchor" number="7.3">
+<h2><span class="header-section-number">7.3</span> Dateien einlesen<a href="dateimanagement.html#dateien-einlesen" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In R sind grundsätzlich alle Datei-Typen einlesbar bzw. verarbeitbar. Hierunter zählen z.B.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Datenformat</th>
+<th>File-Extension</th>
+<th>Bemerkung</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>RData/RDS</td>
+<td>.Rda bzw. .Rds</td>
+<td>native R-Datenformate</td>
+</tr>
+<tr class="even">
+<td>CSV</td>
+<td>.csv</td>
+<td>Comma-Seperated Values</td>
+</tr>
+<tr class="odd">
+<td>Text/ASCII</td>
+<td>.txt</td>
+<td>Reines Textfile</td>
+</tr>
+<tr class="even">
+<td>XLS</td>
+<td>.xls bzw. .xlsx</td>
+<td>EXCEL-Datenformat</td>
+</tr>
+<tr class="odd">
+<td>SAV</td>
+<td>.sav</td>
+<td>SPSS-Datenformat</td>
+</tr>
+<tr class="even">
+<td>DTA</td>
+<td>.dta</td>
+<td>Stata-Datenformat</td>
+</tr>
+<tr class="odd">
+<td>R</td>
+<td>.R</td>
+<td>Speicherung als R-Skript</td>
+</tr>
+</tbody>
+</table>
+<p>R interne Dateien, sowie verschiedene Text-Formate (.csv, .tsv, .txt, …) können bereits mit R Base eingelesen werden. Komplexere Datenformate (Excel, Stata, SPSS) benötigen bestimmte Packages.</p>
+<div id="r-interne-dateien" class="section level3 hasAnchor" number="7.3.1">
+<h3><span class="header-section-number">7.3.1</span> R interne Dateien<a href="dateimanagement.html#r-interne-dateien" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 
 </div>
 </div>
+</div>
+
+
+
+
+
+
+
+
             </section>
 
           </div>
         </div>
       </div>
-<a href="einführung.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="atomare-datentypen.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="packages.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -398,7 +380,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/peer-schwertfeger/handout_r_kurs/edit/master/02-oberflache.Rmd",
+"link": "https://github.com/peer-schwertfeger/handout_r_kurs/edit/master/07-Dateimanagement.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -406,7 +388,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/peer-schwertfeger/handout_r_kurs/blob/master/02-oberflache.Rmd",
+"link": "https://github.com/peer-schwertfeger/handout_r_kurs/blob/master/07-Dateimanagement.Rmd",
 "text": null
 },
 "download": null,
