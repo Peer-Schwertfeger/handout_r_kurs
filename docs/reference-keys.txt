@@ -56,6 +56,8 @@ default-werte
 help-fenster
 prüfe-dich-selbst-3
 packages
+packages-installieren-und-laden
+needs
 dateimanagement
 absolute-und-relative-datenpfade-exkurs
 r-projects

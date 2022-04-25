@@ -219,7 +219,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.6" data-path="funktionen.html"><a href="funktionen.html#help-fenster"><i class="fa fa-check"></i><b>5.6</b> Help Fenster</a></li>
 <li class="chapter" data-level="5.7" data-path="funktionen.html"><a href="funktionen.html#prüfe-dich-selbst-3"><i class="fa fa-check"></i><b>5.7</b> Prüfe dich selbst</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="packages.html"><a href="packages.html"><i class="fa fa-check"></i><b>6</b> Packages</a></li>
+<li class="chapter" data-level="6" data-path="packages.html"><a href="packages.html"><i class="fa fa-check"></i><b>6</b> Packages</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="packages.html"><a href="packages.html#packages-installieren-und-laden"><i class="fa fa-check"></i><b>6.1</b> Packages installieren und Laden</a></li>
+<li class="chapter" data-level="6.2" data-path="packages.html"><a href="packages.html#needs"><i class="fa fa-check"></i><b>6.2</b> needs()</a></li>
+</ul></li>
 <li class="chapter" data-level="7" data-path="dateimanagement.html"><a href="dateimanagement.html"><i class="fa fa-check"></i><b>7</b> Dateimanagement</a>
 <ul>
 <li class="chapter" data-level="7.1" data-path="dateimanagement.html"><a href="dateimanagement.html#absolute-und-relative-datenpfade-exkurs"><i class="fa fa-check"></i><b>7.1</b> Absolute und relative Datenpfade (Exkurs)</a></li>
@@ -268,7 +272,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb146"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb146-1"><a href="funktionen.html#cb146-1" aria-hidden="true" tabindex="-1"></a>mean</span></code></pre></div>
 <pre><code>## function (x, ...) 
 ## UseMethod(&quot;mean&quot;)
-## &lt;bytecode: 0x11dcedf58&gt;
+## &lt;bytecode: 0x10f176e78&gt;
 ## &lt;environment: namespace:base&gt;</code></pre>
 <p>Alle anderen Funktionen bestehen aus einer Komposition dieser <em>primitiven</em> Funktionen.</p>
 <p>Beispiel:</p>
@@ -276,7 +280,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>## function (x, na.rm = FALSE) 
 ## sqrt(var(if (is.vector(x) || is.factor(x)) x else as.double(x), 
 ##     na.rm = na.rm))
-## &lt;bytecode: 0x10ab269e0&gt;
+## &lt;bytecode: 0x10c94d9e0&gt;
 ## &lt;environment: namespace:stats&gt;</code></pre>
 </div>
 <div id="aufbau" class="section level2 hasAnchor" number="5.2">
@@ -325,8 +329,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Auch diese Funktion gibt ein Objekt zurück.</li>
 <li>usw.</li>
 </ul>
-<div id="htmlwidget-5276f3aece7ea327836d" style="width:672px;height:192px;" class="DiagrammeR html-widget"></div>
-<script type="application/json" data-for="htmlwidget-5276f3aece7ea327836d">{"x":{"diagram":"\ngraph LR;\n    A(X) -->|mean| B(Mittelwert von X)\n    B -->|round| C(gerundeter Mittelwert von X)\n        "},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-0efed7cff25aeba07eb4" style="width:672px;height:192px;" class="DiagrammeR html-widget"></div>
+<script type="application/json" data-for="htmlwidget-0efed7cff25aeba07eb4">{"x":{"diagram":"\ngraph LR;\n    A(X) -->|mean| B(Mittelwert von X)\n    B -->|round| C(gerundeter Mittelwert von X)\n        "},"evals":[],"jsHooks":[]}</script>
 <p>Code Beispiel:</p>
 <div class="sourceCode" id="cb161"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb161-1"><a href="funktionen.html#cb161-1" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>,<span class="sc">-</span><span class="dv">2</span>,<span class="sc">-</span><span class="dv">3</span>,<span class="sc">-</span><span class="dv">4</span>) <span class="sc">|&gt;</span> </span>
 <span id="cb161-2"><a href="funktionen.html#cb161-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mean</span>() <span class="sc">|&gt;</span></span>

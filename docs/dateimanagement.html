@@ -219,7 +219,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.6" data-path="funktionen.html"><a href="funktionen.html#help-fenster"><i class="fa fa-check"></i><b>5.6</b> Help Fenster</a></li>
 <li class="chapter" data-level="5.7" data-path="funktionen.html"><a href="funktionen.html#prüfe-dich-selbst-3"><i class="fa fa-check"></i><b>5.7</b> Prüfe dich selbst</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="packages.html"><a href="packages.html"><i class="fa fa-check"></i><b>6</b> Packages</a></li>
+<li class="chapter" data-level="6" data-path="packages.html"><a href="packages.html"><i class="fa fa-check"></i><b>6</b> Packages</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="packages.html"><a href="packages.html#packages-installieren-und-laden"><i class="fa fa-check"></i><b>6.1</b> Packages installieren und Laden</a></li>
+<li class="chapter" data-level="6.2" data-path="packages.html"><a href="packages.html#needs"><i class="fa fa-check"></i><b>6.2</b> needs()</a></li>
+</ul></li>
 <li class="chapter" data-level="7" data-path="dateimanagement.html"><a href="dateimanagement.html"><i class="fa fa-check"></i><b>7</b> Dateimanagement</a>
 <ul>
 <li class="chapter" data-level="7.1" data-path="dateimanagement.html"><a href="dateimanagement.html#absolute-und-relative-datenpfade-exkurs"><i class="fa fa-check"></i><b>7.1</b> Absolute und relative Datenpfade (Exkurs)</a></li>
@@ -254,12 +258,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="absolute-und-relative-datenpfade-exkurs" class="section level2 hasAnchor" number="7.1">
 <h2><span class="header-section-number">7.1</span> Absolute und relative Datenpfade (Exkurs)<a href="dateimanagement.html#absolute-und-relative-datenpfade-exkurs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Um Dateien in R zu laden, muss zumeist ein Datenpfad angegeben werden, der zu der zu ladenden Datei führt. Der Datenpfad ist dabei zunächst entsprechen lang:</p>
-<div class="sourceCode" id="cb173"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb173-1"><a href="dateimanagement.html#cb173-1" aria-hidden="true" tabindex="-1"></a>df_example <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">&quot;/Users/username/Documents/GitHub/r-kurs/sitzung/data/strata.csv&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb177"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb177-1"><a href="dateimanagement.html#cb177-1" aria-hidden="true" tabindex="-1"></a>df_example <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">&quot;/Users/username/Documents/GitHub/r-kurs/sitzung/data/strata.csv&quot;</span>)</span></code></pre></div>
 <p>Diese langen Datenpfade können mithilfe von <em>Working Directories</em> (WD) gelöst werden. Diese können mit der Funktion <code>setwd()</code> eingerichtet werden.</p>
-<div class="sourceCode" id="cb174"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb174-1"><a href="dateimanagement.html#cb174-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="at">dir =</span> <span class="st">&quot;/Users/username/Documents/GitHub/r-kurs/sitzung&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb178"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb178-1"><a href="dateimanagement.html#cb178-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="at">dir =</span> <span class="st">&quot;/Users/username/Documents/GitHub/r-kurs/sitzung&quot;</span>)</span></code></pre></div>
 <p>Im Zweifel kann die WD dann mithilfe von <code>getwd()</code> abgerufen werden.</p>
 <p>Wurde eine WD festgelegt, kann der Datenpfad nun bei dem Ort beginnen, der über die <code>setwd()</code> Funktion festgelegt wurde.</p>
-<div class="sourceCode" id="cb175"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb175-1"><a href="dateimanagement.html#cb175-1" aria-hidden="true" tabindex="-1"></a>df_example <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">&quot;data/strata.csv&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb179"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb179-1"><a href="dateimanagement.html#cb179-1" aria-hidden="true" tabindex="-1"></a>df_example <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">&quot;data/strata.csv&quot;</span>)</span></code></pre></div>
 <p>Der Nachteil dieser Herangehensweise ist, dass die WD global für alle Arbeitsschritte festgelegt wird. Sollen aber WDs für einzelne “Projekte” festgelegt werden, <strong>sollten</strong> RProjects genutzt werden.</p>
 </div>
 <div id="r-projects" class="section level2 hasAnchor" number="7.2">

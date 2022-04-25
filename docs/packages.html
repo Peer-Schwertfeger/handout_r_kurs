@@ -219,7 +219,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.6" data-path="funktionen.html"><a href="funktionen.html#help-fenster"><i class="fa fa-check"></i><b>5.6</b> Help Fenster</a></li>
 <li class="chapter" data-level="5.7" data-path="funktionen.html"><a href="funktionen.html#prüfe-dich-selbst-3"><i class="fa fa-check"></i><b>5.7</b> Prüfe dich selbst</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="packages.html"><a href="packages.html"><i class="fa fa-check"></i><b>6</b> Packages</a></li>
+<li class="chapter" data-level="6" data-path="packages.html"><a href="packages.html"><i class="fa fa-check"></i><b>6</b> Packages</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="packages.html"><a href="packages.html#packages-installieren-und-laden"><i class="fa fa-check"></i><b>6.1</b> Packages installieren und Laden</a></li>
+<li class="chapter" data-level="6.2" data-path="packages.html"><a href="packages.html#needs"><i class="fa fa-check"></i><b>6.2</b> needs()</a></li>
+</ul></li>
 <li class="chapter" data-level="7" data-path="dateimanagement.html"><a href="dateimanagement.html"><i class="fa fa-check"></i><b>7</b> Dateimanagement</a>
 <ul>
 <li class="chapter" data-level="7.1" data-path="dateimanagement.html"><a href="dateimanagement.html#absolute-und-relative-datenpfade-exkurs"><i class="fa fa-check"></i><b>7.1</b> Absolute und relative Datenpfade (Exkurs)</a></li>
@@ -250,7 +254,72 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="packages" class="section level1 hasAnchor" number="6">
 <h1><span class="header-section-number">Kapitel 6</span> Packages<a href="packages.html#packages" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Alle Probleme und Anwendungen lassen sich, jedenfalls theoretisch, mit den
+Basis-Funktionen von R realisieren. Um so weiter in der Datenanalyse
+fortgeschritten wird, desto komplexer werden jedoch die Probleme. Wiederkehrende
+Probleme lassen sich oft lösen, indem selber Funktionen geschrieben werden. Bei
+vielen Programmiersprachen kommen hierbei zwei Gedanken auf:</p>
+<ul>
+<li>(Fast) Alle Probleme waren schonmal da.</li>
+<li>(Fast) Alle Probleme treten wiederholt auf.</li>
+</ul>
+<p>Da andere User:innen (wahrscheinlich) bereits auf das gleiche Problem gestoßen
+sind und entsprechende Funktionen geschrieben haben, um das Problem zu lösen,
+können diese ihre Funktionen in sogenannten <strong>Packages</strong> der Allgemeinheit zur
+Verfügung stellen.</p>
+<p>So kann mithilfe dieser Packages der Funktionsumfang von R praktisch beliebig
+erweitert werden.</p>
+<div id="packages-installieren-und-laden" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Packages installieren und Laden<a href="packages.html#packages-installieren-und-laden" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Bevor auf die Funktionen der Packages zurückgegriffen werden kann, muss dieses
+auf dem Computer installiert werden. Analog könnte man hierunter auch das Lernen
+von neuen Vokabeln verstehen.</p>
+<p>Das Installieren erfolgt über die Funktion <code>install.packages()</code>. Das einzige
+Argument ist der Name des zu ladenden Packages als Character.</p>
+<div class="sourceCode" id="cb173"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb173-1"><a href="packages.html#cb173-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>)</span></code></pre></div>
+<p>Ist das Package installiert, muss es zunächst nun noch geladen werden, bevor es
+benutzt werden kann. Hierfür gibt es zwei Funktionen:</p>
+<ul>
+<li><code>library(tidyverse)</code></li>
+<li><code>require(tidyverse)</code></li>
+</ul>
+<p>In der Praxis macht es meist keinen Unterschied, welche Funktion genutzt wird.
+Das einzige Argument ist der Name des Packages als Name
+(ohne Anführungszeichen).</p>
+<p><code>require()</code> wurde für die Anwendung in Funktionen entwickelt. Wird ein Package
+hiermit geladen, wird ein <code>FALSE</code> zurückgegeben, wenn das Package nicht
+installiert ist.</p>
+<div class="sourceCode" id="cb174"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb174-1"><a href="packages.html#cb174-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(tidyverse)</span></code></pre></div>
+<p><code>library()</code> gibt eine Fehlermeldung zurück, wenn das Package nicht installiert
+ist. Im Alltagsgebrauch wird diese Funktion empfohlen.</p>
+<div class="sourceCode" id="cb175"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb175-1"><a href="packages.html#cb175-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div>
+</div>
+<div id="needs" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> needs()<a href="packages.html#needs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Gerade im Arbeitsfluss ist die oben beschriebene Vorgehensweise lästig. Auf
+dieses Problem sind bereits vorher User:innen gestoßen und haben entsprechend
+ein Package geschrieben, was den Arbeitsfluss erleichtern soll. Dieses Package
+heißt (sehr passend) <code>Needs</code> und lädt nur eine Funktionen: <code>needs()</code>.</p>
+<p><code>needs()</code> kann, mit Komma getrennt, ein oder mehr Packages als Namen (ohne
+Anführungszeichen) übergeben werden. Beim Ausführen wird zunächst überprüft,
+ob das Package installiert ist. Ist es installiert, wird es geladen. Ist es nicht
+installiert, wird es installiert und anschließend geladen.</p>
+<div class="sourceCode" id="cb176"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb176-1"><a href="packages.html#cb176-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages(&quot;needs&quot;)</span></span>
+<span id="cb176-2"><a href="packages.html#cb176-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(needs)</span>
+<span id="cb176-3"><a href="packages.html#cb176-3" aria-hidden="true" tabindex="-1"></a><span class="fu">needs</span>(haven,</span>
+<span id="cb176-4"><a href="packages.html#cb176-4" aria-hidden="true" tabindex="-1"></a>      tidyverse,</span>
+<span id="cb176-5"><a href="packages.html#cb176-5" aria-hidden="true" tabindex="-1"></a>      lubridate</span>
+<span id="cb176-6"><a href="packages.html#cb176-6" aria-hidden="true" tabindex="-1"></a>      )</span></code></pre></div>
+<p>Im Arbeitsfluss kann dann ein Package, was benötigt wird, einfach in die Funktion
+geschrieben und ausgeführt werden.</p>
+<p><strong>Hinweis!</strong></p>
+<p>Beim ersten Laden fragt <code>needs</code>, ob es sich selber laden soll, wenn es gebraucht
+wird. Wählt man <em>yes</em> aus, wird die Zeile <code>library(needs)</code> nicht benötigt.
+Diese Funktionsweise ist ein wenig “buggy”; heißt: manchmal funktioniert das
+nicht. Wir empfehlen, einfach das Package zu Beginn zu laden und sich nicht
+hierauf zu verlassen.</p>
 
+</div>
 </div>
             </section>
 
