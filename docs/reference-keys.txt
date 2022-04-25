@@ -6,6 +6,8 @@ fig:unnamed-chunk-7
 fig:unnamed-chunk-8
 fig:editor
 fig:unnamed-chunk-80
+fig:unnamed-chunk-88
+fig:unnamed-chunk-93
 einführung
 was-ist-r-und-warum-sollte-man-r-lernen
 installation
@@ -59,7 +61,9 @@ packages
 packages-installieren-und-laden
 needs
 dateimanagement
-absolute-und-relative-datenpfade-exkurs
+absolute-und-relative-dateipfade-exkurs
 r-projects
 dateien-einlesen
 r-interne-dateien
+r-externe-dateien
+haven-package
