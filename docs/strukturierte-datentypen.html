@@ -6,10 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Kapitel 4 Strukturierte Datentypen | Handout für R Grundkurs</title>
   <meta name="description" content="Kapitel 4 Strukturierte Datentypen | Handout für R Grundkurs" />
-  <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Kapitel 4 Strukturierte Datentypen | Handout für R Grundkurs" />
   <meta property="og:type" content="book" />
+  
   
   
   
@@ -30,6 +31,7 @@
   
 <link rel="prev" href="atomare-datentypen.html"/>
 <link rel="next" href="funktionen.html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -47,9 +49,8 @@
 
 
 
-<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
-<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 <script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
 <script src="libs/d3-3.3.8/d3.min.js"></script>
 <script src="libs/dagre-0.4.0/dagre-d3.min.js"></script>
@@ -57,7 +58,7 @@
 <script src="libs/mermaid-0.3.0/dist/mermaid.slim.min.js"></script>
 <link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
 <script src="libs/chromatography-0.1/chromatography.js"></script>
-<script src="libs/DiagrammeR-binding-1.0.9/DiagrammeR.js"></script>
+<script src="libs/DiagrammeR-binding-1.0.6.1/DiagrammeR.js"></script>
 
 
 <style type="text/css">
@@ -234,6 +235,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.3.2" data-path="dateimanagement.html"><a href="dateimanagement.html#r-externe-dateien"><i class="fa fa-check"></i><b>7.3.2</b> R-externe Dateien</a></li>
 </ul></li>
 </ul></li>
+<li class="chapter" data-level="8" data-path="tidyverse.html"><a href="tidyverse.html"><i class="fa fa-check"></i><b>8</b> Tidyverse</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="tidyverse.html"><a href="tidyverse.html#das-tidyverse"><i class="fa fa-check"></i><b>8.1</b> Das “Tidyverse”</a></li>
+<li class="chapter" data-level="8.2" data-path="tidyverse.html"><a href="tidyverse.html#tidyverse-laden"><i class="fa fa-check"></i><b>8.2</b> Tidyverse laden</a></li>
+<li class="chapter" data-level="8.3" data-path="tidyverse.html"><a href="tidyverse.html#dplyr"><i class="fa fa-check"></i><b>8.3</b> <code>dplyr::</code></a>
+<ul>
+<li class="chapter" data-level="8.3.1" data-path="tidyverse.html"><a href="tidyverse.html#daten-verfügbar-machen"><i class="fa fa-check"></i><b>8.3.1</b> Daten verfügbar machen</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="tidyverse.html"><a href="tidyverse.html#variablen-manipulieren"><i class="fa fa-check"></i><b>8.4</b> Variablen Manipulieren</a></li>
+<li class="chapter" data-level="8.5" data-path="tidyverse.html"><a href="tidyverse.html#prüfe-dich-selbst-4"><i class="fa fa-check"></i><b>8.5</b> Prüfe dich selbst</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 </ul>
@@ -253,8 +265,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="strukturierte-datentypen" class="section level1 hasAnchor" number="4">
-<h1><span class="header-section-number">Kapitel 4</span> Strukturierte Datentypen<a href="strukturierte-datentypen.html#strukturierte-datentypen" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="strukturierte-datentypen" class="section level1" number="4">
+<h1><span class="header-section-number">Kapitel 4</span> Strukturierte Datentypen</h1>
 <p>Basierend auf den einfachen (atomaren) Datentypen existieren in R
 die folgenden grundlegenden Datenstrukturen.</p>
 <table>
@@ -317,8 +329,8 @@ die folgenden grundlegenden Datenstrukturen.</p>
 <p>Vektoren und Matrizen sind eine strukturierte Zusammenstellung von Daten gleichen Typs. Ein Vektor kann zum Beispiele eine Reihe von integer Werten bündeln, dann aber keine zusätzlichen logischen Werte oder Zeichenketten aufnehmen. Im Gegensatz dazu erlauben Listen und Data Frames es uns auch Daten unterschiedlichen Typs zu bündeln. In diesem Kapitel wollen wir uns damit auseinandersetzen, was für Implikationen die hier skizzierten Eigenschaften der verschiedenen Datenstrukturen auf deren Anwendung haben.</p>
 <p>Damit die Datenstruktur für euch auch visuell an Gestalt gewinnen, habe ich hier mal eine vereinfachte Darstellung mit den zentralen Eigenschaften der Datenstrukturen gewagt. Sie ist nicht in allen Hinsichten korrekt, soll aber dazu dienen, die grundlegenden Unterschiede der verschiedenen Datenstrukturen zu veranschaulichen.</p>
 <p><img src="resources/data_structures.png" width="70%" style="display: block; margin: auto;" /></p>
-<div id="vektoren" class="section level2 hasAnchor" number="4.1">
-<h2><span class="header-section-number">4.1</span> Vektoren<a href="strukturierte-datentypen.html#vektoren" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="vektoren" class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> Vektoren</h2>
 <p>Vektoren sind sequentiell geordnete Folgen von Werten <em>gleichen Typs</em>. Vektoren können auf ganz unterschiedliche Art erzeugt werden.</p>
 <p>Beispiel: Informationen zum Lineup für die Clubnacht heute. Mit der Funktion <code>c()</code> (kurz für ‘concatenate’).</p>
 <div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="strukturierte-datentypen.html#cb56-1" aria-hidden="true" tabindex="-1"></a>DJ_Alter <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">34</span>,<span class="dv">45</span>,<span class="dv">28</span>,<span class="dv">25</span>,<span class="dv">20</span>)</span>
@@ -351,8 +363,8 @@ die folgenden grundlegenden Datenstrukturen.</p>
 <span id="cb70-2"><a href="strukturierte-datentypen.html#cb70-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">times =</span> <span class="dv">3</span></span>
 <span id="cb70-3"><a href="strukturierte-datentypen.html#cb70-3" aria-hidden="true" tabindex="-1"></a>    )</span></code></pre></div>
 <pre><code>## [1] &quot;Nein!&quot; &quot;Doch!&quot; &quot;Nein!&quot; &quot;Doch!&quot; &quot;Nein!&quot; &quot;Doch!&quot;</code></pre>
-<div id="abfragen-von-werten-durch-subsetting-von-vektoren" class="section level3 hasAnchor" number="4.1.1">
-<h3><span class="header-section-number">4.1.1</span> Abfragen von Werten durch Subsetting von Vektoren<a href="strukturierte-datentypen.html#abfragen-von-werten-durch-subsetting-von-vektoren" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="abfragen-von-werten-durch-subsetting-von-vektoren" class="section level3" number="4.1.1">
+<h3><span class="header-section-number">4.1.1</span> Abfragen von Werten durch Subsetting von Vektoren</h3>
 <p>Mit dem Operator <code>[]</code> können einzelne Elemente eines Vektors abgefragt werden. Hier zum Beispiel die Indexposition 2:</p>
 <div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb72-1"><a href="strukturierte-datentypen.html#cb72-1" aria-hidden="true" tabindex="-1"></a>DJ_Alter[<span class="dv">2</span>]</span></code></pre></div>
 <pre><code>## [1] 45</code></pre>
@@ -374,8 +386,8 @@ korrespondierenden “wahren” Elemente eines Vektors ermittelt.</p>
 <div class="sourceCode" id="cb82"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb82-1"><a href="strukturierte-datentypen.html#cb82-1" aria-hidden="true" tabindex="-1"></a>  DJ_Name[DJ_Vinyl]</span></code></pre></div>
 <pre><code>## [1] &quot;Cabanne&quot; &quot;Molly&quot;</code></pre>
 </div>
-<div id="vektorisierte-operationen" class="section level3 hasAnchor" number="4.1.2">
-<h3><span class="header-section-number">4.1.2</span> Vektorisierte Operationen<a href="strukturierte-datentypen.html#vektorisierte-operationen" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="vektorisierte-operationen" class="section level3" number="4.1.2">
+<h3><span class="header-section-number">4.1.2</span> Vektorisierte Operationen</h3>
 <p>Alle atomaren Datentypen sind tatsächlich Vektoren der Länge 1</p>
 <div class="sourceCode" id="cb84"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb84-1"><a href="strukturierte-datentypen.html#cb84-1" aria-hidden="true" tabindex="-1"></a>  zahl <span class="ot">&lt;-</span> <span class="dv">1</span></span>
 <span id="cb84-2"><a href="strukturierte-datentypen.html#cb84-2" aria-hidden="true" tabindex="-1"></a>  p <span class="ot">&lt;-</span> <span class="cn">TRUE</span></span>
@@ -406,8 +418,8 @@ atomare Datentypen definiert sind als vektorisierte Operation, d.h. elementweise
 <span id="cb98-2"><a href="strukturierte-datentypen.html#cb98-2" aria-hidden="true" tabindex="-1"></a>  DJ_Geburtsjahr</span></code></pre></div>
 <pre><code>## [1] 1988 1977 1994 1997 2002</code></pre>
 </div>
-<div id="operationen-auf-vektoren" class="section level3 hasAnchor" number="4.1.3">
-<h3><span class="header-section-number">4.1.3</span> Operationen auf Vektoren<a href="strukturierte-datentypen.html#operationen-auf-vektoren" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="operationen-auf-vektoren" class="section level3" number="4.1.3">
+<h3><span class="header-section-number">4.1.3</span> Operationen auf Vektoren</h3>
 <p>Abhängig vom Datentyp eines Vektors existieren verschiedene
 Funktionen, welche als Argument einen Vektor nehmen und auf
 ein Resultat abbilden.</p>
@@ -443,8 +455,8 @@ ein Resultat abbilden.</p>
 <pre><code>## [1] TRUE</code></pre>
 </div>
 </div>
-<div id="matrizen" class="section level2 hasAnchor" number="4.2">
-<h2><span class="header-section-number">4.2</span> Matrizen<a href="strukturierte-datentypen.html#matrizen" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="matrizen" class="section level2" number="4.2">
+<h2><span class="header-section-number">4.2</span> Matrizen</h2>
 <p>Die Datenstruktur einer Matrix verallgemeinert das Konzept
 eines Vektors in zwei Dimensionen. Eine Matrix kann z. B. durch
 einen Vektor mit dem Befehl <code>matrix()</code> generiert werden:</p>
@@ -468,8 +480,8 @@ einen Vektor mit dem Befehl <code>matrix()</code> generiert werden:</p>
 <p>Analog können wir auch nur das Argument für die Spalte angeben:</p>
 <div class="sourceCode" id="cb110"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb110-1"><a href="strukturierte-datentypen.html#cb110-1" aria-hidden="true" tabindex="-1"></a>M[ ,<span class="dv">1</span>]</span></code></pre></div>
 <pre><code>## [1] 1 4 7</code></pre>
-<div id="benennung-von-spalten" class="section level3 hasAnchor" number="4.2.1">
-<h3><span class="header-section-number">4.2.1</span> Benennung von Spalten<a href="strukturierte-datentypen.html#benennung-von-spalten" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="benennung-von-spalten" class="section level3" number="4.2.1">
+<h3><span class="header-section-number">4.2.1</span> Benennung von Spalten</h3>
 <p>Mit der Funktion <code>colnames()</code> lassen sich einerseits die Spalten
 (columns) einer Matrix benennen/ändern, als auch abrufen.</p>
 <div class="sourceCode" id="cb112"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb112-1"><a href="strukturierte-datentypen.html#cb112-1" aria-hidden="true" tabindex="-1"></a>    <span class="fu">colnames</span>(M) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;A&quot;</span>,<span class="st">&quot;B&quot;</span>,<span class="st">&quot;C&quot;</span>)</span>
@@ -485,8 +497,8 @@ einen Vektor mit dem Befehl <code>matrix()</code> generiert werden:</p>
 <div class="sourceCode" id="cb116"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb116-1"><a href="strukturierte-datentypen.html#cb116-1" aria-hidden="true" tabindex="-1"></a>M[ ,<span class="st">&quot;B&quot;</span>]</span></code></pre></div>
 <pre><code>## [1] 2 5 8</code></pre>
 </div>
-<div id="erzeugung-von-matrizen-aus-vektoren" class="section level3 hasAnchor" number="4.2.2">
-<h3><span class="header-section-number">4.2.2</span> Erzeugung von Matrizen aus Vektoren<a href="strukturierte-datentypen.html#erzeugung-von-matrizen-aus-vektoren" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="erzeugung-von-matrizen-aus-vektoren" class="section level3" number="4.2.2">
+<h3><span class="header-section-number">4.2.2</span> Erzeugung von Matrizen aus Vektoren</h3>
 <p>Zwei Vektoren können mit der Funktion <code>cbind()</code> in eine Matrix überführt werden.</p>
 <div class="sourceCode" id="cb118"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb118-1"><a href="strukturierte-datentypen.html#cb118-1" aria-hidden="true" tabindex="-1"></a>D <span class="ot">&lt;-</span> <span class="fu">cbind</span>(DJ_Alter,DJ_Geburtsjahr)</span>
 <span id="cb118-2"><a href="strukturierte-datentypen.html#cb118-2" aria-hidden="true" tabindex="-1"></a>D</span></code></pre></div>
@@ -500,8 +512,8 @@ einen Vektor mit dem Befehl <code>matrix()</code> generiert werden:</p>
 <p><strong>Achtung!</strong> Achtet darauf, dass die zwei Vektoren den gleichen atomaren Datentypen haben, sonst wird der “höherwertigere” der beiden umgewandelt. Wenn ihr zum Beispiel einen <code>character</code> Vector und einen vom Typ <code>logical</code> mit der Funktion <code>cbind()</code> verbindet, erhaltet ihr eine Matrix mit <em>ausschließlich</em> <code>character</code> Werten.</p>
 </div>
 </div>
-<div id="listen" class="section level2 hasAnchor" number="4.3">
-<h2><span class="header-section-number">4.3</span> Listen<a href="strukturierte-datentypen.html#listen" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="listen" class="section level2" number="4.3">
+<h2><span class="header-section-number">4.3</span> Listen</h2>
 <p>Eine Liste ist ein “verallgemeinerter Vektor” und lässt als Elemente
 beliebige Werte oder Datenstrukturen zu:</p>
 <div class="sourceCode" id="cb120"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb120-1"><a href="strukturierte-datentypen.html#cb120-1" aria-hidden="true" tabindex="-1"></a>  profil_marie <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">Name =</span> <span class="st">&quot;Marie&quot;</span>, </span>
@@ -518,8 +530,8 @@ beliebige Werte oder Datenstrukturen zu:</p>
 ## $Alter
 ## [1] 24</code></pre>
 <p>Die Elemente können auch gleich einem Namen zugeordnet werden.</p>
-<div id="indizierung-von-listen" class="section level3 hasAnchor" number="4.3.1">
-<h3><span class="header-section-number">4.3.1</span> Indizierung von Listen<a href="strukturierte-datentypen.html#indizierung-von-listen" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="indizierung-von-listen" class="section level3" number="4.3.1">
+<h3><span class="header-section-number">4.3.1</span> Indizierung von Listen</h3>
 <p>Die Indizierung von Listen funktioniert etwas anders als bei den homogenen Datenstrukturen, da die Liste eigentlich nur Referenzen auf Objekte sammelt. Wenn wir die einzelnen Objekte für Operationen verwenden wollen, nutzen wir am besten den <code>$</code> (Dollar) Operator. So können wir die Objekte, auf welche die Liste verweist, direkt ‘ansprechen’.</p>
 <div class="sourceCode" id="cb122"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb122-1"><a href="strukturierte-datentypen.html#cb122-1" aria-hidden="true" tabindex="-1"></a>profil_marie<span class="sc">$</span>Name</span></code></pre></div>
 <pre><code>## [1] &quot;Marie&quot;</code></pre>
@@ -540,8 +552,8 @@ beliebige Werte oder Datenstrukturen zu:</p>
 <p>Falls ihr noch tiefer in das Subsetting von Listen einsteigen wollt, empfiehlt sich das Kapitel “Subsetting” aus dem Buch <a href="https://adv-r.hadley.nz/subsetting.html">Advanced R</a>.</p>
 </div>
 </div>
-<div id="data-frames" class="section level2 hasAnchor" number="4.4">
-<h2><span class="header-section-number">4.4</span> Data Frames<a href="strukturierte-datentypen.html#data-frames" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="data-frames" class="section level2" number="4.4">
+<h2><span class="header-section-number">4.4</span> Data Frames</h2>
 <p>Die für statistische Zwecke häufigste und wichtigste
 Datenstruktur ist die einer Datentabelle, ein sogenanntes <code>dataframe</code>.</p>
 <p>Diese können wir ganz einfach aus Vektoren erzeugen:</p>
@@ -555,8 +567,8 @@ Datenstruktur ist die einer Datentabelle, ein sogenanntes <code>dataframe</code>
 ## 3   Molly    28
 ## 4 Echoton    25
 ## 5   cv313    20</code></pre>
-<div id="indizierung-von-datentabellen" class="section level3 hasAnchor" number="4.4.1">
-<h3><span class="header-section-number">4.4.1</span> Indizierung von Datentabellen<a href="strukturierte-datentypen.html#indizierung-von-datentabellen" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="indizierung-von-datentabellen" class="section level3" number="4.4.1">
+<h3><span class="header-section-number">4.4.1</span> Indizierung von Datentabellen</h3>
 <p>Analog zu Matrizen:</p>
 <div class="sourceCode" id="cb134"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb134-1"><a href="strukturierte-datentypen.html#cb134-1" aria-hidden="true" tabindex="-1"></a>  df_lineup[<span class="dv">3</span>, ]</span></code></pre></div>
 <pre><code>##    Name Alter
@@ -567,8 +579,8 @@ Datenstruktur ist die einer Datentabelle, ein sogenanntes <code>dataframe</code>
 <div class="sourceCode" id="cb138"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb138-1"><a href="strukturierte-datentypen.html#cb138-1" aria-hidden="true" tabindex="-1"></a>  df_lineup<span class="sc">$</span>Name</span></code></pre></div>
 <pre><code>## [1] &quot;DJ Puma&quot; &quot;Cabanne&quot; &quot;Molly&quot;   &quot;Echoton&quot; &quot;cv313&quot;</code></pre>
 </div>
-<div id="aufname-weiterer-variablenspalten" class="section level3 hasAnchor" number="4.4.2">
-<h3><span class="header-section-number">4.4.2</span> Aufname weiterer Variablen/Spalten<a href="strukturierte-datentypen.html#aufname-weiterer-variablenspalten" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="aufname-weiterer-variablenspalten" class="section level3" number="4.4.2">
+<h3><span class="header-section-number">4.4.2</span> Aufname weiterer Variablen/Spalten</h3>
 <p>Analog zu Matrizen können wir mit der Funktion <code>cbind()</code> Vektoren als Spalten eines bereits bestehenden Data Frames aufnehmen.</p>
 <div class="sourceCode" id="cb140"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb140-1"><a href="strukturierte-datentypen.html#cb140-1" aria-hidden="true" tabindex="-1"></a>   df_lineup <span class="ot">&lt;-</span> <span class="fu">cbind</span>(df_lineup,DJ_Vinyl)</span>
 <span id="cb140-2"><a href="strukturierte-datentypen.html#cb140-2" aria-hidden="true" tabindex="-1"></a>   df_lineup</span></code></pre></div>
@@ -588,15 +600,15 @@ Datenstruktur ist die einer Datentabelle, ein sogenanntes <code>dataframe</code>
 ## 4 Echoton    25    FALSE        1997
 ## 5   cv313    20    FALSE        2002</code></pre>
 </div>
-<div id="operationen-auf-datentabellen" class="section level3 hasAnchor" number="4.4.3">
-<h3><span class="header-section-number">4.4.3</span> Operationen auf Datentabellen<a href="strukturierte-datentypen.html#operationen-auf-datentabellen" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="operationen-auf-datentabellen" class="section level3" number="4.4.3">
+<h3><span class="header-section-number">4.4.3</span> Operationen auf Datentabellen</h3>
 <p>Die Objekt, welche in einer Datentabelle gespeichert sind, können wir, wie alle anderen Objekte auch, in Funktionsaufrufen weiter verwenden.</p>
 <div class="sourceCode" id="cb144"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb144-1"><a href="strukturierte-datentypen.html#cb144-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(df_lineup<span class="sc">$</span>Alter)</span></code></pre></div>
 <pre><code>## [1] 30.4</code></pre>
 </div>
 </div>
-<div id="prüfe-dich-selbst-2" class="section level2 hasAnchor" number="4.5">
-<h2><span class="header-section-number">4.5</span> Prüfe dich selbst<a href="strukturierte-datentypen.html#prüfe-dich-selbst-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="prüfe-dich-selbst-2" class="section level2" number="4.5">
+<h2><span class="header-section-number">4.5</span> Prüfe dich selbst</h2>
 <ul class="task-list">
 <li><input type="checkbox" disabled="" checked="" />
 Du solltest die vier grundlegenden strukturierten Datentypen nennen und unterscheiden können.</li>
@@ -662,7 +674,8 @@ gitbook.start({
 "options": null
 },
 "toc": {
-"collapse": "subsection"
+"collapse": "section",
+"scroll_highlight": true
 }
 });
 });

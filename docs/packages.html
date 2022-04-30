@@ -6,10 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Kapitel 6 Packages | Handout für R Grundkurs</title>
   <meta name="description" content="Kapitel 6 Packages | Handout für R Grundkurs" />
-  <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Kapitel 6 Packages | Handout für R Grundkurs" />
   <meta property="og:type" content="book" />
+  
   
   
   
@@ -30,6 +31,7 @@
   
 <link rel="prev" href="funktionen.html"/>
 <link rel="next" href="dateimanagement.html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -47,9 +49,8 @@
 
 
 
-<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
-<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 <script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
 <script src="libs/d3-3.3.8/d3.min.js"></script>
 <script src="libs/dagre-0.4.0/dagre-d3.min.js"></script>
@@ -57,7 +58,7 @@
 <script src="libs/mermaid-0.3.0/dist/mermaid.slim.min.js"></script>
 <link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
 <script src="libs/chromatography-0.1/chromatography.js"></script>
-<script src="libs/DiagrammeR-binding-1.0.9/DiagrammeR.js"></script>
+<script src="libs/DiagrammeR-binding-1.0.6.1/DiagrammeR.js"></script>
 
 
 <style type="text/css">
@@ -234,6 +235,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.3.2" data-path="dateimanagement.html"><a href="dateimanagement.html#r-externe-dateien"><i class="fa fa-check"></i><b>7.3.2</b> R-externe Dateien</a></li>
 </ul></li>
 </ul></li>
+<li class="chapter" data-level="8" data-path="tidyverse.html"><a href="tidyverse.html"><i class="fa fa-check"></i><b>8</b> Tidyverse</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="tidyverse.html"><a href="tidyverse.html#das-tidyverse"><i class="fa fa-check"></i><b>8.1</b> Das “Tidyverse”</a></li>
+<li class="chapter" data-level="8.2" data-path="tidyverse.html"><a href="tidyverse.html#tidyverse-laden"><i class="fa fa-check"></i><b>8.2</b> Tidyverse laden</a></li>
+<li class="chapter" data-level="8.3" data-path="tidyverse.html"><a href="tidyverse.html#dplyr"><i class="fa fa-check"></i><b>8.3</b> <code>dplyr::</code></a>
+<ul>
+<li class="chapter" data-level="8.3.1" data-path="tidyverse.html"><a href="tidyverse.html#daten-verfügbar-machen"><i class="fa fa-check"></i><b>8.3.1</b> Daten verfügbar machen</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="tidyverse.html"><a href="tidyverse.html#variablen-manipulieren"><i class="fa fa-check"></i><b>8.4</b> Variablen Manipulieren</a></li>
+<li class="chapter" data-level="8.5" data-path="tidyverse.html"><a href="tidyverse.html#prüfe-dich-selbst-4"><i class="fa fa-check"></i><b>8.5</b> Prüfe dich selbst</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 </ul>
@@ -253,8 +265,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="packages" class="section level1 hasAnchor" number="6">
-<h1><span class="header-section-number">Kapitel 6</span> Packages<a href="packages.html#packages" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="packages" class="section level1" number="6">
+<h1><span class="header-section-number">Kapitel 6</span> Packages</h1>
 <p>Alle Probleme und Anwendungen lassen sich, jedenfalls theoretisch, mit den
 Basis-Funktionen von R realisieren. Um so weiter in der Datenanalyse
 fortgeschritten wird, desto komplexer werden jedoch die Probleme. Wiederkehrende
@@ -270,8 +282,8 @@ können diese ihre Funktionen in sogenannten <strong>Packages</strong> der Allge
 Verfügung stellen.</p>
 <p>So kann mithilfe dieser Packages der Funktionsumfang von R praktisch beliebig
 erweitert werden.</p>
-<div id="packages-installieren-und-laden" class="section level2 hasAnchor" number="6.1">
-<h2><span class="header-section-number">6.1</span> Packages installieren und Laden<a href="packages.html#packages-installieren-und-laden" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="packages-installieren-und-laden" class="section level2" number="6.1">
+<h2><span class="header-section-number">6.1</span> Packages installieren und Laden</h2>
 <p>Bevor auf die Funktionen der Packages zurückgegriffen werden kann, muss dieses
 auf dem Computer installiert werden. Analog könnte man hierunter auch das Lernen
 von neuen Vokabeln verstehen.</p>
@@ -295,8 +307,8 @@ installiert ist.</p>
 ist. Im Alltagsgebrauch wird diese Funktion empfohlen.</p>
 <div class="sourceCode" id="cb175"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb175-1"><a href="packages.html#cb175-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div>
 </div>
-<div id="needs" class="section level2 hasAnchor" number="6.2">
-<h2><span class="header-section-number">6.2</span> needs()<a href="packages.html#needs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="needs" class="section level2" number="6.2">
+<h2><span class="header-section-number">6.2</span> needs()</h2>
 <p>Gerade im Arbeitsfluss ist die oben beschriebene Vorgehensweise lästig. Auf
 dieses Problem sind bereits vorher User:innen gestoßen und haben entsprechend
 ein Package geschrieben, was den Arbeitsfluss erleichtern soll. Dieses Package
@@ -376,7 +388,8 @@ gitbook.start({
 "options": null
 },
 "toc": {
-"collapse": "subsection"
+"collapse": "section",
+"scroll_highlight": true
 }
 });
 });
