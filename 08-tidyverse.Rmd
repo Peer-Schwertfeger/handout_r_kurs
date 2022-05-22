@@ -206,7 +206,7 @@ Man sollte sich immer vergegenwärtigen, an welchem Punkt man Analysen auf Grupp
 
 ## Prüfe dich selbst
 
-Von dieser Sitzung solltest du folgenden mitgenommen haben:
+Von dieser Sitzung solltest du Folgendes mitgenommen haben:
 
   - [x] Du solltest wissen, was das Tidyverse ist.
   - [x] Du solltest wissen, was "tidy-data" auszeichnet. (siehe 8.2) 

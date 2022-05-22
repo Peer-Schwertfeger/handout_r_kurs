@@ -237,14 +237,36 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="8" data-path="tidyverse.html"><a href="tidyverse.html"><i class="fa fa-check"></i><b>8</b> Tidyverse</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="tidyverse.html"><a href="tidyverse.html#das-tidyverse"><i class="fa fa-check"></i><b>8.1</b> Das “Tidyverse”</a></li>
-<li class="chapter" data-level="8.2" data-path="tidyverse.html"><a href="tidyverse.html#tidyverse-laden"><i class="fa fa-check"></i><b>8.2</b> Tidyverse laden</a></li>
-<li class="chapter" data-level="8.3" data-path="tidyverse.html"><a href="tidyverse.html#dplyr"><i class="fa fa-check"></i><b>8.3</b> <code>dplyr::</code></a>
+<li class="chapter" data-level="8.1" data-path="tidyverse.html"><a href="tidyverse.html#das-tidyverse"><i class="fa fa-check"></i><b>8.1</b> Das “Tidyverse”</a>
 <ul>
-<li class="chapter" data-level="8.3.1" data-path="tidyverse.html"><a href="tidyverse.html#daten-verfügbar-machen"><i class="fa fa-check"></i><b>8.3.1</b> Daten verfügbar machen</a></li>
+<li class="chapter" data-level="8.1.1" data-path="tidyverse.html"><a href="tidyverse.html#tidyverse-laden"><i class="fa fa-check"></i><b>8.1.1</b> Tidyverse laden</a></li>
 </ul></li>
-<li class="chapter" data-level="8.4" data-path="tidyverse.html"><a href="tidyverse.html#variablen-manipulieren"><i class="fa fa-check"></i><b>8.4</b> Variablen Manipulieren</a></li>
+<li class="chapter" data-level="8.2" data-path="tidyverse.html"><a href="tidyverse.html#dplyr"><i class="fa fa-check"></i><b>8.2</b> <code>dplyr::</code></a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="tidyverse.html"><a href="tidyverse.html#daten-verfügbar-machen"><i class="fa fa-check"></i><b>8.2.1</b> Daten verfügbar machen</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="tidyverse.html"><a href="tidyverse.html#variablen-manipulieren"><i class="fa fa-check"></i><b>8.3</b> Variablen Manipulieren</a>
+<ul>
+<li class="chapter" data-level="8.3.1" data-path="tidyverse.html"><a href="tidyverse.html#neue-variablen-erstellen"><i class="fa fa-check"></i><b>8.3.1</b> Neue Variablen erstellen</a></li>
+<li class="chapter" data-level="8.3.2" data-path="tidyverse.html"><a href="tidyverse.html#variablen-umbennen"><i class="fa fa-check"></i><b>8.3.2</b> Variablen umbennen</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="tidyverse.html"><a href="tidyverse.html#fälle-manipulieren"><i class="fa fa-check"></i><b>8.4</b> Fälle Manipulieren</a>
+<ul>
+<li class="chapter" data-level="8.4.1" data-path="tidyverse.html"><a href="tidyverse.html#fälle-gruppieren"><i class="fa fa-check"></i><b>8.4.1</b> Fälle Gruppieren</a></li>
+</ul></li>
 <li class="chapter" data-level="8.5" data-path="tidyverse.html"><a href="tidyverse.html#prüfe-dich-selbst-4"><i class="fa fa-check"></i><b>8.5</b> Prüfe dich selbst</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="kontrollstrukturen.html"><a href="kontrollstrukturen.html"><i class="fa fa-check"></i><b>9</b> Kontrollstrukturen</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="kontrollstrukturen.html"><a href="kontrollstrukturen.html#prinzipien-der-programmierung"><i class="fa fa-check"></i><b>9.1</b> Prinzipien der Programmierung</a></li>
+<li class="chapter" data-level="9.2" data-path="kontrollstrukturen.html"><a href="kontrollstrukturen.html#funktionen-selber-schreiben"><i class="fa fa-check"></i><b>9.2</b> Funktionen selber schreiben</a></li>
+<li class="chapter" data-level="9.3" data-path="kontrollstrukturen.html"><a href="kontrollstrukturen.html#kontrollstrukturen-1"><i class="fa fa-check"></i><b>9.3</b> Kontrollstrukturen</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="kontrollstrukturen.html"><a href="kontrollstrukturen.html#vektorisierte-fallunterscheidungen"><i class="fa fa-check"></i><b>9.3.1</b> Vektorisierte Fallunterscheidungen</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="kontrollstrukturen.html"><a href="kontrollstrukturen.html#schleifen"><i class="fa fa-check"></i><b>9.4</b> Schleifen</a></li>
+<li class="chapter" data-level="9.5" data-path="kontrollstrukturen.html"><a href="kontrollstrukturen.html#vektorisiertes-programmieren"><i class="fa fa-check"></i><b>9.5</b> Vektorisiertes Programmieren</a></li>
+<li class="chapter" data-level="9.6" data-path="kontrollstrukturen.html"><a href="kontrollstrukturen.html#prüfe-dich-selbst-5"><i class="fa fa-check"></i><b>9.6</b> Prüfe dich selbst</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -483,7 +505,13 @@ Berechnungen und Operationen zur Verfügung:</p>
 <p>Wir haben mittlerweile ein paar Objekte im Speicher
 angelegt und an Namen gebunden. Mit <code>ls()</code> kann man diese abrufen:</p>
 <div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="atomare-datentypen.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span>()</span></code></pre></div>
-<pre><code>## [1] &quot;starwars&quot; &quot;x_1&quot;      &quot;x_test&quot;   &quot;y_test&quot;</code></pre>
+<pre><code>##  [1] &quot;alter_moni&quot;         &quot;alter_tom&quot;          &quot;countdown&quot;          &quot;D&quot;                  &quot;df_lineup&quot;         
+##  [6] &quot;DJ_Alter&quot;           &quot;DJ_Geburtsjahr&quot;     &quot;DJ_Name&quot;            &quot;DJ_Vinyl&quot;           &quot;i&quot;                 
+## [11] &quot;is.positive&quot;        &quot;M&quot;                  &quot;name&quot;               &quot;name_bundeskanzler&quot; &quot;p&quot;                 
+## [16] &quot;pow&quot;                &quot;profil_marie&quot;       &quot;q&quot;                  &quot;quadrat&quot;            &quot;starwars&quot;          
+## [21] &quot;theendoftheworld&quot;   &quot;un_lambda&quot;          &quot;v1&quot;                 &quot;v1_log&quot;             &quot;v2&quot;                
+## [26] &quot;x&quot;                  &quot;x_1&quot;                &quot;x_test&quot;             &quot;y&quot;                  &quot;y_test&quot;            
+## [31] &quot;z&quot;                  &quot;zahl&quot;</code></pre>
 <p>Mit <code>rm()</code> kann man unnötige Objekte über deren Namen entfernen:</p>
 <div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="atomare-datentypen.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(y_test)</span></code></pre></div>
 <p>Wenn ihr gleich alle angelegte, referenzierbare Objekte aus dem Speicher entfernen wollt:</p>
