@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Kapitel 7 Dateimanagement | Handout für R Grundkurs</title>
   <meta name="description" content="Kapitel 7 Dateimanagement | Handout für R Grundkurs" />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Kapitel 7 Dateimanagement | Handout für R Grundkurs" />
   <meta property="og:type" content="book" />
-  
   
   
   
@@ -31,7 +30,6 @@
   
 <link rel="prev" href="packages.html"/>
 <link rel="next" href="tidyverse.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -49,8 +47,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
 <script src="libs/d3-3.3.8/d3.min.js"></script>
 <script src="libs/dagre-0.4.0/dagre-d3.min.js"></script>
@@ -58,7 +57,7 @@
 <script src="libs/mermaid-0.3.0/dist/mermaid.slim.min.js"></script>
 <link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
 <script src="libs/chromatography-0.1/chromatography.js"></script>
-<script src="libs/DiagrammeR-binding-1.0.6.1/DiagrammeR.js"></script>
+<script src="libs/DiagrammeR-binding-1.0.9/DiagrammeR.js"></script>
 
 
 <style type="text/css">
@@ -287,11 +286,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="dateimanagement" class="section level1" number="7">
-<h1><span class="header-section-number">Kapitel 7</span> Dateimanagement</h1>
+<div id="dateimanagement" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">Kapitel 7</span> Dateimanagement<a href="dateimanagement.html#dateimanagement" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>RStudio bietet intern bereits ein gutes Tool, um Dateien auf der Festplatte zu verarbeiten. Dateien lassen sich hier <em>löschen</em>, <em>umbenennen</em>, <em>neuen Ordnern hinzufügen</em>, <em>verschieben</em> oder <em>kopieren.</em></p>
-<div id="absolute-und-relative-dateipfade-exkurs" class="section level2" number="7.1">
-<h2><span class="header-section-number">7.1</span> Absolute und relative Dateipfade (Exkurs)</h2>
+<div id="absolute-und-relative-dateipfade-exkurs" class="section level2 hasAnchor" number="7.1">
+<h2><span class="header-section-number">7.1</span> Absolute und relative Dateipfade (Exkurs)<a href="dateimanagement.html#absolute-und-relative-dateipfade-exkurs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Um Dateien in R zu laden, muss zumeist ein Datenpfad angegeben werden, der zu der zu ladenden Datei führt. Der Datenpfad ist dabei zunächst entsprechen lang:</p>
 <div class="sourceCode" id="cb177"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb177-1"><a href="dateimanagement.html#cb177-1" aria-hidden="true" tabindex="-1"></a>df_example <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">&quot;/Users/username/Documents/GitHub/r-kurs/sitzung/data/strata.csv&quot;</span>)</span></code></pre></div>
 <p>Diese langen Datenpfade können mithilfe von <em>Working Directories</em> (WD) gelöst werden. Diese können mit der Funktion <code>setwd()</code> eingerichtet werden.</p>
@@ -301,8 +300,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb179"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb179-1"><a href="dateimanagement.html#cb179-1" aria-hidden="true" tabindex="-1"></a>df_example <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">&quot;data/strata.csv&quot;</span>)</span></code></pre></div>
 <p>Der Nachteil dieser Herangehensweise ist, dass die WD global für alle Arbeitsschritte festgelegt wird. Sollen aber WDs für einzelne “Projekte” festgelegt werden, <strong>sollten</strong> RProjects genutzt werden.</p>
 </div>
-<div id="r-projects" class="section level2" number="7.2">
-<h2><span class="header-section-number">7.2</span> R Projects</h2>
+<div id="r-projects" class="section level2 hasAnchor" number="7.2">
+<h2><span class="header-section-number">7.2</span> R Projects<a href="dateimanagement.html#r-projects" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-88"></span>
 <img src="resources/r_proj.png" alt="R Project Logo" width="40%" />
 <p class="caption">
@@ -324,8 +323,8 @@ Abb. 7.1: R Project Logo
 <li>RHistory wird projektbezogen gespeichert</li>
 </ul>
 </div>
-<div id="dateien-einlesen" class="section level2" number="7.3">
-<h2><span class="header-section-number">7.3</span> Dateien einlesen</h2>
+<div id="dateien-einlesen" class="section level2 hasAnchor" number="7.3">
+<h2><span class="header-section-number">7.3</span> Dateien einlesen<a href="dateimanagement.html#dateien-einlesen" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In R sind grundsätzlich alle Datei-Typen einlesbar bzw. verarbeitbar. Hierunter zählen z.B.</p>
 <table>
 <thead>
@@ -374,8 +373,8 @@ Abb. 7.1: R Project Logo
 </tbody>
 </table>
 <p>R interne Dateien, sowie verschiedene Text-Formate (.csv, .tsv, .txt, …) können bereits mit R Base eingelesen werden. Komplexere Datenformate (Excel, Stata, SPSS) benötigen bestimmte Packages.</p>
-<div id="r-interne-dateien" class="section level3" number="7.3.1">
-<h3><span class="header-section-number">7.3.1</span> R-interne Dateien</h3>
+<div id="r-interne-dateien" class="section level3 hasAnchor" number="7.3.1">
+<h3><span class="header-section-number">7.3.1</span> R-interne Dateien<a href="dateimanagement.html#r-interne-dateien" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Objekte in der R Umgebung lassen sich explizit als Datei auf dem Computer speichern.
 Hierzu gibt es zwei mögliche Datei-Formate:</p>
 <p><strong><code>.Rda</code> (R Data)</strong></p>
@@ -413,11 +412,11 @@ Hierzu gibt es zwei mögliche Datei-Formate:</p>
 <li>Nur ein Objekt kann gespeichert/geladen werden</li>
 </ul>
 </div>
-<div id="r-externe-dateien" class="section level3" number="7.3.2">
-<h3><span class="header-section-number">7.3.2</span> R-externe Dateien</h3>
+<div id="r-externe-dateien" class="section level3 hasAnchor" number="7.3.2">
+<h3><span class="header-section-number">7.3.2</span> R-externe Dateien<a href="dateimanagement.html#r-externe-dateien" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Sollen andere Dateiformate eingelesen werden, werden unterschiedliche Packages benötigt.</p>
-<div id="haven-package" class="section level4" number="7.3.2.1">
-<h4><span class="header-section-number">7.3.2.1</span> Haven Package</h4>
+<div id="haven-package" class="section level4 hasAnchor" number="7.3.2.1">
+<h4><span class="header-section-number">7.3.2.1</span> Haven Package<a href="dateimanagement.html#haven-package" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-93"></span>
 <img src="resources/logo_haven.png" alt="haven Package Logo" width="40%" />
 <p class="caption">

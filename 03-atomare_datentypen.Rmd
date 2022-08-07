@@ -1,6 +1,6 @@
 # Atomare Datentypen 
 
-Datentypen sind die Grundlage einer jeder Programmiersprache und somit essenziell zum Verständnis dieser. Sie dienen dazu, verschiedene Typen unterscheiden. Etwa Zahlen von Buchstaben. Das ist besonders wichtig, da wir mit unterschiedlichen 'Typen' unterschiedliche Operationen ausführen, bzw. nicht ausführen, können. Zum Beispiel können wir mit Zahlen rechnen, mit Buchstaben hingegen nicht. Mit logischen Bedingungen können wir wiederum Wahrheitswerte ermitteln, mit Zahlen hingegen nicht. Zu wissen, welche Eigenschaften die verschiedene Datentypen haben und welche Operationen mit diesen möglich sind, hilft dabei vielen potenziellen Fehlern vorzubeugen und so Frustration zu vermeiden. 
+Datentypen sind die Grundlage einer jeder Programmiersprache und somit essenziell zum Verständnis dieser. Sie dienen dazu, verschiedene Typen zu unterscheiden. Etwa Zahlen von Buchstaben. Das ist besonders wichtig, da wir mit unterschiedlichen 'Typen' unterschiedliche Operationen ausführen, bzw. nicht ausführen, können. Zum Beispiel können wir mit Zahlen rechnen, mit Buchstaben hingegen nicht. Mit logischen Bedingungen können wir wiederum Wahrheitswerte ermitteln, mit Zahlen hingegen nicht. Zu wissen, welche Eigenschaften die verschiedene Datentypen haben und welche Operationen mit diesen möglich sind, hilft dabei vielen potenziellen Fehlern vorzubeugen und so Frustration zu vermeiden. 
 
 
 Zunächst einmal wollen wir uns die atomaren Datentypen anschauen. Diese bilden die Grundlage aller folgenden Datentypen.
@@ -14,7 +14,7 @@ character             Zeichenfolge                           "Mexico"
 NA,NULL,NaN           Unbestimmt, Leer, Undefiniert                    
 Inf                   Unendlich                                        
 
-Die numerischen Datentypen `integer` und `numeric` erlauben es uns numerische Informationen zu repräsentieren. Mit dem Datentyp `logical` können wir logische Informationen repräsentieren. Um symbolische Informationen zu repräsentieren, verwenden wir den Datentyp `character`. Mit numerischen-, logischen- und symbolischen Informationen ist es bereits möglich eine Vielzahl von Sachverhalten auszudrücken. Was dies sein kann, wollen wir uns im Folgenden anschauen.
+Die numerischen Datentypen `integer` und `numeric` erlauben es numerische Informationen zu repräsentieren. Mit dem Datentyp `logical` können logische Informationen repräsentieren werden. Um symbolische Informationen zu repräsentieren, verwenden wir den Datentyp `character`. Mit numerischen-, logischen- und symbolischen Informationen ist es bereits möglich eine Vielzahl von Sachverhalten auszudrücken. Was dies sein kann, wollen wir uns im Folgenden anschauen.
 
 ## Arithmetische Grundoperationen und Basisfunktionen
 

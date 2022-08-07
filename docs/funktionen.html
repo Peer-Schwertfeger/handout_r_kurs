@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Kapitel 5 Funktionen | Handout für R Grundkurs</title>
   <meta name="description" content="Kapitel 5 Funktionen | Handout für R Grundkurs" />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Kapitel 5 Funktionen | Handout für R Grundkurs" />
   <meta property="og:type" content="book" />
-  
   
   
   
@@ -31,7 +30,6 @@
   
 <link rel="prev" href="strukturierte-datentypen.html"/>
 <link rel="next" href="packages.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -49,8 +47,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
 <script src="libs/d3-3.3.8/d3.min.js"></script>
 <script src="libs/dagre-0.4.0/dagre-d3.min.js"></script>
@@ -58,7 +57,7 @@
 <script src="libs/mermaid-0.3.0/dist/mermaid.slim.min.js"></script>
 <link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
 <script src="libs/chromatography-0.1/chromatography.js"></script>
-<script src="libs/DiagrammeR-binding-1.0.6.1/DiagrammeR.js"></script>
+<script src="libs/DiagrammeR-binding-1.0.9/DiagrammeR.js"></script>
 
 
 <style type="text/css">
@@ -287,14 +286,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="funktionen" class="section level1" number="5">
-<h1><span class="header-section-number">Kapitel 5</span> Funktionen</h1>
+<div id="funktionen" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">Kapitel 5</span> Funktionen<a href="funktionen.html#funktionen" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Zur Erinnerung:</p>
 <p>In R wird grundsätzlich zwischen <strong>Funktionen</strong> und <strong>Objekten</strong> unterschieden.</p>
 <p>In diesem Kapitel wird es um die Grundlagen im Umgang mit Funktionen gehen.</p>
 <p>Technisch gesehen, handelt es sich bei R um eine <em>funktionale Programmiersprache</em>. D.h., einfach formuliert, dass Problemlösungen durch Funktionen erfolgen.<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a></p>
-<div id="eigenschaften" class="section level2" number="5.1">
-<h2><span class="header-section-number">5.1</span> Eigenschaften</h2>
+<div id="eigenschaften" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> Eigenschaften<a href="funktionen.html#eigenschaften" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Die meisten Funktionen in R haben bestimmte eigenschaften:</p>
 <p><strong>1. Funktionen sind “eigenständig”.</strong></p>
 <p>Der Output einer Funktion hängt lediglich von seinem Input ab. Wird eine Funktion mit den gleichen argumentativen Werten zweimal ausgeführt, ist der Output in beiden Durchgängen identisch.</p>
@@ -307,7 +306,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb146"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb146-1"><a href="funktionen.html#cb146-1" aria-hidden="true" tabindex="-1"></a>mean</span></code></pre></div>
 <pre><code>## function (x, ...) 
 ## UseMethod(&quot;mean&quot;)
-## &lt;bytecode: 0x55741f9144a0&gt;
+## &lt;bytecode: 0x55d92ff89750&gt;
 ## &lt;environment: namespace:base&gt;</code></pre>
 <p>Alle anderen Funktionen bestehen aus einer Komposition dieser <em>primitiven</em> Funktionen.</p>
 <p>Beispiel:</p>
@@ -315,11 +314,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>## function (x, na.rm = FALSE) 
 ## sqrt(var(if (is.vector(x) || is.factor(x)) x else as.double(x), 
 ##     na.rm = na.rm))
-## &lt;bytecode: 0x55741f918c80&gt;
+## &lt;bytecode: 0x55d92c4146c8&gt;
 ## &lt;environment: namespace:stats&gt;</code></pre>
 </div>
-<div id="aufbau" class="section level2" number="5.2">
-<h2><span class="header-section-number">5.2</span> Aufbau</h2>
+<div id="aufbau" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> Aufbau<a href="funktionen.html#aufbau" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Funktionsaufrufe folgen i.d.R. dem Schema</p>
 <p><code>Funktionsname(Argument 1 = ..., Argument 2 = ..., ...)</code></p>
 <p>Bei den Argumenten handelt es sich meistens…</p>
@@ -345,16 +344,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><strong>Wichtiger Hinweis!</strong></p>
 <p>Es lohnt sich immer, die Argumente in einer Funktion zu benennen. Nicht nur erleichtert es euch, den Code auch nach langer Zeit noch zu verstehen, sondern auch anderen wird das Lesen eures Codes erleichtert.</p>
 </div>
-<div id="verschachtelungen" class="section level2" number="5.3">
-<h2><span class="header-section-number">5.3</span> Verschachtelungen</h2>
+<div id="verschachtelungen" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> Verschachtelungen<a href="funktionen.html#verschachtelungen" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Bei dem Output von Funktionen handelt es sich (fast) immer um Objekte. Diese Objekte können natürlich direkt wieder einer Funktion übergeben werden. Diese Eigenschaft ermöglicht es, Funktionen zu schachteln. Hieraus ergibt sich, dass R diese Schachtelungen von <strong>Innen nach Außen</strong> auflöst.</p>
 <p>Im folgenden Beispiel wird also zunächst der Mittelwert des Vektors bestimmt. Im Anschluss wird der Absolutbetrag hiervon genommen, usw.</p>
 <div class="sourceCode" id="cb159"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb159-1"><a href="funktionen.html#cb159-1" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">log</span>(<span class="fu">abs</span>(<span class="fu">mean</span>(<span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>,<span class="sc">-</span><span class="dv">2</span>,<span class="sc">-</span><span class="dv">3</span>,<span class="sc">-</span><span class="dv">4</span>)))))</span></code></pre></div>
 <pre><code>## [1] 1</code></pre>
 <p>Dieses Beispiel ist noch relativ gut überschaubar. Im Arbeiten werden diese Ketten jedoch schnell komplexer und unübersichtlich. Eine Alternative hierzu bieten sogenannte <strong>Pipes</strong>.</p>
 </div>
-<div id="pipes" class="section level2" number="5.4">
-<h2><span class="header-section-number">5.4</span> Pipes</h2>
+<div id="pipes" class="section level2 hasAnchor" number="5.4">
+<h2><span class="header-section-number">5.4</span> Pipes<a href="funktionen.html#pipes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Pipes bilden die Alternative zu geschachtelten Funktionen. Erstmals eingeführt wurden diese inner der Package-Familie des <em>Tidyverse</em> (<code>%&gt;%</code>, siehe Kapitel zum Tidyverse). Seit der R Version 4.1.0 ist jedoch auch ein nativer Pipe-Operator verfügbar (<code>|&gt;</code>).</p>
 <p>Pipes funktionieren analog zu geschachtelten Funktionen:</p>
 <ul>
@@ -364,8 +363,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Auch diese Funktion gibt ein Objekt zurück.</li>
 <li>usw.</li>
 </ul>
-<div id="htmlwidget-8db7608ec9a9506c0b5f" style="width:672px;height:192px;" class="DiagrammeR html-widget"></div>
-<script type="application/json" data-for="htmlwidget-8db7608ec9a9506c0b5f">{"x":{"diagram":"\ngraph LR;\n    A(X) -->|mean| B(Mittelwert von X)\n    B -->|round| C(gerundeter Mittelwert von X)\n        "},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-7a735bceb4b6dc0b69b1" style="width:672px;height:192px;" class="DiagrammeR html-widget"></div>
+<script type="application/json" data-for="htmlwidget-7a735bceb4b6dc0b69b1">{"x":{"diagram":"\ngraph LR;\n    A(X) -->|mean| B(Mittelwert von X)\n    B -->|round| C(gerundeter Mittelwert von X)\n        "},"evals":[],"jsHooks":[]}</script>
 <p>Code Beispiel:</p>
 <div class="sourceCode" id="cb161"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb161-1"><a href="funktionen.html#cb161-1" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>,<span class="sc">-</span><span class="dv">2</span>,<span class="sc">-</span><span class="dv">3</span>,<span class="sc">-</span><span class="dv">4</span>) <span class="sc">|&gt;</span> </span>
 <span id="cb161-2"><a href="funktionen.html#cb161-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mean</span>() <span class="sc">|&gt;</span></span>
@@ -377,8 +376,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><strong>Pro Tipp</strong></p>
 <p>Um einen Pipe-Operator einzufügen, kann die Tastenkombination <code>Str + Umschalt + m</code> bzw. <code>CMD + Umschalt + m</code> genutzt werden. Will man statt des nativen Operators den Operator aus dem Tidyverse nutzen, kann das über <code>Tools</code> <span class="math inline">\(\rightarrow\)</span> <code>Global Options</code> <span class="math inline">\(\rightarrow\)</span> <code>Code</code> <span class="math inline">\(\rightarrow\)</span> <code>Use native pipe operator</code> geändert werden.</p>
 </div>
-<div id="default-werte" class="section level2" number="5.5">
-<h2><span class="header-section-number">5.5</span> Default Werte</h2>
+<div id="default-werte" class="section level2 hasAnchor" number="5.5">
+<h2><span class="header-section-number">5.5</span> Default Werte<a href="funktionen.html#default-werte" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Die meisten Funktionen in R verfügen über sogenannte <em>Default Werte</em>. Hierbei handelt es sich um voreingestellte Werte, die für bestimmte Argumente verwendet werden, wenn bei diesen kein Wert übergeben wird.</p>
 <p>Für die Funktion <code>round()</code> ist ein Default Wert von <code>0</code> für das Argument <code>digits</code> hinterlegt. Entsprechend sind die folgenden zwei Codezeilen funktional identisch:</p>
 <div class="sourceCode" id="cb163"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb163-1"><a href="funktionen.html#cb163-1" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="at">x =</span> pi)</span></code></pre></div>
@@ -397,8 +396,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb171-2"><a href="funktionen.html#cb171-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
 <pre><code>## [1] 1</code></pre>
 </div>
-<div id="help-fenster" class="section level2" number="5.6">
-<h2><span class="header-section-number">5.6</span> Help Fenster</h2>
+<div id="help-fenster" class="section level2 hasAnchor" number="5.6">
+<h2><span class="header-section-number">5.6</span> Help Fenster<a href="funktionen.html#help-fenster" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Natürlich muss und soll niemand alle Argumente zu allen Funktionen auswendig lernen. R stellt hierzu bereits intern ein hilfreiches Hilfe-Fenster zur Verfügung.</p>
 <p>Für jede Funktion kann dieses über <code>?Funktionsaufruf</code> aufgerufen werden.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-80"></span>
@@ -417,8 +416,8 @@ Abb. 5.1: Help Fenster
 <p>Je nach Package und Entwickler der Funktion ist das korrespondierende Hilfe-Fenster hilfreicher oder weniger hilfreich. Manchmal sind die Beschreibungen sehr kryptisch. Im Zweifel lohnt sich immer eine Google-Suche für euer spezifisches Problem (Stack Overflow!).</p>
 <p>Und im Zweifel gilt: Immer mit der Ruhe und keine Panik ;-)</p>
 </div>
-<div id="prüfe-dich-selbst-3" class="section level2" number="5.7">
-<h2><span class="header-section-number">5.7</span> Prüfe dich selbst</h2>
+<div id="prüfe-dich-selbst-3" class="section level2 hasAnchor" number="5.7">
+<h2><span class="header-section-number">5.7</span> Prüfe dich selbst<a href="funktionen.html#prüfe-dich-selbst-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Von dieser Sitzung solltest du folgendes mitgenommen haben:</p>
 <ul class="task-list">
 <li><input type="checkbox" disabled="" checked="" />
