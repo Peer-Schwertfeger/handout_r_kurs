@@ -18,7 +18,7 @@ Die numerischen Datentypen `integer` und `numeric` erlauben es numerische Inform
 
 ## Arithmetische Grundoperationen und Basisfunktionen
 
-R beherscht für alle  Zahlen die arithmetischen Grundoperationen und eignet sich somit wunderbar als Taschenrechner.
+R beherrscht für alle  Zahlen die arithmetischen Grundoperationen und eignet sich somit wunderbar als Taschenrechner.
 
   Operation     Beschreibung                          Beispiel  
   ----------    --------------------------            ---------
@@ -37,7 +37,7 @@ Beispiel:
 ```
 
  
-R vefügt für den Datentypen `numeric` über viele elementare Grundfunktionen.
+R verfügt für den Datentypen `numeric` über viele elementare Grundfunktionen.
  Hier nur ein paar wenige relevante Beispiele:
  
   Operation         Beschreibung                           Beispiel  
@@ -56,7 +56,7 @@ log(3)
 
 Funktionen sind ein wichtiger Teil von R und werden syntaktisch durch eine öffnende und eine schließende Klammer gekennzeichnet, nach diesem Schema: `funktion()`. Gerade haben wir bereits eine Funktion ausgeführt, indem wir `sqrt(9)` aufgerufen haben. Ausführlich werden Funktionen noch in Kapitel \@ref(funktionen) besprochen. Ein paar Grundlagen wollen wir hier aber schon einmal einführen:
 
-Funktionensaufrufe erfolgen in der Regel über das Schema
+Funktionsaufrufe erfolgen in der Regel über das Schema
  
 `Funktionsname(Argument 1, Argument 2, ...)`
  
