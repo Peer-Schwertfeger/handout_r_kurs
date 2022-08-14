@@ -37,6 +37,7 @@ zeichenketten-character-strings
 klasse-eines-datenobjektes
 spezielle-werte
 prüfe-dich-selbst-1
+literaturverweise
 strukturierte-datentypen
 vektoren
 abfragen-von-werten-durch-subsetting-von-vektoren

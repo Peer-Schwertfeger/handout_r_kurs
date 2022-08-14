@@ -3,18 +3,18 @@
 Datentypen sind die Grundlage einer jeder Programmiersprache und somit essenziell zum Verständnis dieser. Sie dienen dazu, verschiedene Typen zu unterscheiden. Etwa Zahlen von Buchstaben. Das ist besonders wichtig, da wir mit unterschiedlichen 'Typen' unterschiedliche Operationen ausführen, bzw. nicht ausführen, können. Zum Beispiel können wir mit Zahlen rechnen, mit Buchstaben hingegen nicht. Mit logischen Bedingungen können wir wiederum Wahrheitswerte ermitteln, mit Zahlen hingegen nicht. Zu wissen, welche Eigenschaften die verschiedene Datentypen haben und welche Operationen mit diesen möglich sind, hilft dabei vielen potenziellen Fehlern vorzubeugen und so Frustration zu vermeiden. 
 
 
-Zunächst einmal wollen wir uns die atomaren Datentypen anschauen. Diese bilden die Grundlage aller folgenden Datentypen.
+Zunächst einmal wollen wir uns die atomaren Datentypen anschauen. Diese bilden die Grundlage aller folgenden Datenstrukturen.
 
 Datentyp              Beschreibung                            Beispiel 
 -------------------   -------------------------------------  ----------
 integer               ganze Zahlen                            -2L       
-numeric               reelle Zahlen                           5.2456   
+double                rationale Zahlen                        5.2456   
 logical               logische Werte                          TRUE     
 character             Zeichenfolge                           "Mexico" 
 NA,NULL,NaN           Unbestimmt, Leer, Undefiniert                    
 Inf                   Unendlich                                        
 
-Die numerischen Datentypen `integer` und `numeric` erlauben es numerische Informationen zu repräsentieren. Mit dem Datentyp `logical` können logische Informationen repräsentieren werden. Um symbolische Informationen zu repräsentieren, verwenden wir den Datentyp `character`. Mit numerischen-, logischen- und symbolischen Informationen ist es bereits möglich eine Vielzahl von Sachverhalten auszudrücken. Was dies sein kann, wollen wir uns im Folgenden anschauen.
+Die numerischen Datentypen `integer` und `double` erlauben es numerische Informationen zu repräsentieren. Mit dem Datentyp `logical` können logische Informationen repräsentiert werden. Um symbolische Informationen zu repräsentieren, verwenden wir den Datentyp `character`. Mit numerischen-, logischen- und symbolischen Informationen ist es bereits möglich eine Vielzahl von Sachverhalten auszudrücken. Was dies sein kann, wollen wir uns im Folgenden anschauen.
 
 ## Arithmetische Grundoperationen und Basisfunktionen
 
@@ -37,7 +37,7 @@ Beispiel:
 ```
 
  
-R verfügt für den Datentypen `numeric` über viele elementare Grundfunktionen.
+R verfügt für Daten numerischen Typs über viele elementare Grundfunktionen.
  Hier nur ein paar wenige relevante Beispiele:
  
   Operation         Beschreibung                           Beispiel  
@@ -83,7 +83,7 @@ rundet eine Zahl `x` auf `digits` signifikante Stellen.
 
 ### Objekte, Funktionen und Referenzen
 
-“To understand computations in R, two slogans are helpful: Everything that exists is an object. Everything that happens is a function call.”  (John M. Chambers) [^2]
+“To understand computations in R, two slogans are helpful: Everything that exists is an object. Everything that happens is a function call.”  (John M. Chambers) [^2] 
 
 [^2]: https://de.wikipedia.org/wiki/R_%28Programmiersprache%29
 
@@ -315,16 +315,6 @@ name_bundeskanzler
 
 ## Klasse eines Datenobjektes
  
-Zur Erinnerung:
- 
-Datentyp             | Beschreibung             | Beispiel
-----------           | ----------------         | :-----------------------:
-integer              | ganze Zahlen             | -2L
-numeric              | reelle Zahlen            | 5.2456   
-logic                | logische Werte           | TRUE
-character            | Zeichengfolge            | "Mexico" 
-NULL,Inf,NaN         | Leer, Unendlich, keine Zahl |
-
 Die Klasse bzw. der Datentyp eines Objekts lässt sich 
 mit der Funktion `class()` ermitteln oder aber spezifisch/logisch prüfen.
 
@@ -362,4 +352,25 @@ Von dieser Sitzung solltest du folgendes mitgenommen haben:
 - [x] Du solltest verstanden haben, wie man Objekte an einen Namen bindet und warum das nützlich sein kann.
 - [x] Du solltest die elementaren Booleschen (logischen) Operationen in R schreiben können.
 
+
+## Literaturverweise 
+
+*Ergänzend*
+
+- [R-Intro](https://cran.r-project.org/doc/manuals/r-release/R-intro.pdf) Kapitel 1 & 2
+- [Hands-On Programming with R](https://rstudio-education.github.io/hopr/basics.html) Kapitel 2 (Ohne 2.4 & 2.5)
+
+*Weiterführend* 
+
+- [Advanced R](https://adv-r.hadley.nz/) Kapitel 2 
+
+<!-- Referenzen  -->
+
+::: {.invisible style="display:none"}
+@Chambers2014
+@wickham2019advanced
+@r-intro
+@grolemund2014hands
+:::
+  
 

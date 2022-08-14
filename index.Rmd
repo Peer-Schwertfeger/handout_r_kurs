@@ -8,6 +8,11 @@ author: |
   | peer.schwertfeger@uni-leipzig.de
 subtitle: "URZ und Academic Lab Universität Leipzig"
 date: "Stand: `r Sys.Date()`"
+bibliography: ["references.bib"]
+biblio-style: "apalike"
+link-citations: true
+nocite: |
+  @*
 site: bookdown::bookdown_site
 ---
 

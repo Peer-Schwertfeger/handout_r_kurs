@@ -125,6 +125,28 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -183,6 +205,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.5" data-path="atomare-datentypen.html"><a href="atomare-datentypen.html#klasse-eines-datenobjektes"><i class="fa fa-check"></i><b>3.5</b> Klasse eines Datenobjektes</a></li>
 <li class="chapter" data-level="3.6" data-path="atomare-datentypen.html"><a href="atomare-datentypen.html#spezielle-werte"><i class="fa fa-check"></i><b>3.6</b> Spezielle Werte</a></li>
 <li class="chapter" data-level="3.7" data-path="atomare-datentypen.html"><a href="atomare-datentypen.html#prüfe-dich-selbst-1"><i class="fa fa-check"></i><b>3.7</b> Prüfe dich selbst</a></li>
+<li class="chapter" data-level="3.8" data-path="atomare-datentypen.html"><a href="atomare-datentypen.html#literaturverweise"><i class="fa fa-check"></i><b>3.8</b> Literaturverweise</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="strukturierte-datentypen.html"><a href="strukturierte-datentypen.html"><i class="fa fa-check"></i><b>4</b> Strukturierte Datentypen</a>
 <ul>
@@ -289,7 +312,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="atomare-datentypen" class="section level1 hasAnchor" number="3">
 <h1><span class="header-section-number">Kapitel 3</span> Atomare Datentypen<a href="atomare-datentypen.html#atomare-datentypen" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Datentypen sind die Grundlage einer jeder Programmiersprache und somit essenziell zum Verständnis dieser. Sie dienen dazu, verschiedene Typen zu unterscheiden. Etwa Zahlen von Buchstaben. Das ist besonders wichtig, da wir mit unterschiedlichen ‘Typen’ unterschiedliche Operationen ausführen, bzw. nicht ausführen, können. Zum Beispiel können wir mit Zahlen rechnen, mit Buchstaben hingegen nicht. Mit logischen Bedingungen können wir wiederum Wahrheitswerte ermitteln, mit Zahlen hingegen nicht. Zu wissen, welche Eigenschaften die verschiedene Datentypen haben und welche Operationen mit diesen möglich sind, hilft dabei vielen potenziellen Fehlern vorzubeugen und so Frustration zu vermeiden.</p>
-<p>Zunächst einmal wollen wir uns die atomaren Datentypen anschauen. Diese bilden die Grundlage aller folgenden Datentypen.</p>
+<p>Zunächst einmal wollen wir uns die atomaren Datentypen anschauen. Diese bilden die Grundlage aller folgenden Datenstrukturen.</p>
 <table>
 <thead>
 <tr class="header">
@@ -305,8 +328,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <td align="center">-2L</td>
 </tr>
 <tr class="even">
-<td align="left">numeric</td>
-<td align="left">reelle Zahlen</td>
+<td align="left">double</td>
+<td align="left">rationale Zahlen</td>
 <td align="center">5.2456</td>
 </tr>
 <tr class="odd">
@@ -331,7 +354,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 </tbody>
 </table>
-<p>Die numerischen Datentypen <code>integer</code> und <code>numeric</code> erlauben es numerische Informationen zu repräsentieren. Mit dem Datentyp <code>logical</code> können logische Informationen repräsentieren werden. Um symbolische Informationen zu repräsentieren, verwenden wir den Datentyp <code>character</code>. Mit numerischen-, logischen- und symbolischen Informationen ist es bereits möglich eine Vielzahl von Sachverhalten auszudrücken. Was dies sein kann, wollen wir uns im Folgenden anschauen.</p>
+<p>Die numerischen Datentypen <code>integer</code> und <code>double</code> erlauben es numerische Informationen zu repräsentieren. Mit dem Datentyp <code>logical</code> können logische Informationen repräsentiert werden. Um symbolische Informationen zu repräsentieren, verwenden wir den Datentyp <code>character</code>. Mit numerischen-, logischen- und symbolischen Informationen ist es bereits möglich eine Vielzahl von Sachverhalten auszudrücken. Was dies sein kann, wollen wir uns im Folgenden anschauen.</p>
 <div id="arithmetische-grundoperationen-und-basisfunktionen" class="section level2 hasAnchor" number="3.1">
 <h2><span class="header-section-number">3.1</span> Arithmetische Grundoperationen und Basisfunktionen<a href="atomare-datentypen.html#arithmetische-grundoperationen-und-basisfunktionen" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>R beherrscht für alle Zahlen die arithmetischen Grundoperationen und eignet sich somit wunderbar als Taschenrechner.</p>
@@ -368,7 +391,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>## [1] 7</code></pre>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="atomare-datentypen.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fl">10.1</span><span class="sc">^</span><span class="dv">3</span></span></code></pre></div>
 <pre><code>## [1] 1030.301</code></pre>
-<p>R verfügt für den Datentypen <code>numeric</code> über viele elementare Grundfunktionen.
+<p>R verfügt für Daten numerischen Typs über viele elementare Grundfunktionen.
 Hier nur ein paar wenige relevante Beispiele:</p>
 <table>
 <thead>
@@ -504,7 +527,14 @@ Berechnungen und Operationen zur Verfügung:</p>
 <p>Wir haben mittlerweile ein paar Objekte im Speicher
 angelegt und an Namen gebunden. Mit <code>ls()</code> kann man diese abrufen:</p>
 <div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="atomare-datentypen.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span>()</span></code></pre></div>
-<pre><code>## [1] &quot;x_1&quot;    &quot;x_test&quot; &quot;y_test&quot;</code></pre>
+<pre><code>##  [1] &quot;alter_moni&quot;         &quot;alter_tom&quot;          &quot;countdown&quot;          &quot;D&quot;                 
+##  [5] &quot;df_lineup&quot;          &quot;DJ_Alter&quot;           &quot;DJ_Geburtsjahr&quot;     &quot;DJ_Name&quot;           
+##  [9] &quot;DJ_Vinyl&quot;           &quot;i&quot;                  &quot;is.positive&quot;        &quot;M&quot;                 
+## [13] &quot;name&quot;               &quot;name_bundeskanzler&quot; &quot;p&quot;                  &quot;pow&quot;               
+## [17] &quot;profil_marie&quot;       &quot;q&quot;                  &quot;quadrat&quot;            &quot;starwars&quot;          
+## [21] &quot;theendoftheworld&quot;   &quot;un_lambda&quot;          &quot;v1&quot;                 &quot;v1_log&quot;            
+## [25] &quot;v2&quot;                 &quot;x&quot;                  &quot;x_1&quot;                &quot;x_test&quot;            
+## [29] &quot;y&quot;                  &quot;y_test&quot;             &quot;z&quot;                  &quot;zahl&quot;</code></pre>
 <p>Mit <code>rm()</code> kann man unnötige Objekte über deren Namen entfernen:</p>
 <div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="atomare-datentypen.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(y_test)</span></code></pre></div>
 <p>Wenn ihr gleich alle angelegte, referenzierbare Objekte aus dem Speicher entfernen wollt:</p>
@@ -604,43 +634,6 @@ zweierlei Art zugewiesen werden:</p>
 </div>
 <div id="klasse-eines-datenobjektes" class="section level2 hasAnchor" number="3.5">
 <h2><span class="header-section-number">3.5</span> Klasse eines Datenobjektes<a href="atomare-datentypen.html#klasse-eines-datenobjektes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Zur Erinnerung:</p>
-<table>
-<thead>
-<tr class="header">
-<th>Datentyp</th>
-<th>Beschreibung</th>
-<th align="center">Beispiel</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>integer</td>
-<td>ganze Zahlen</td>
-<td align="center">-2L</td>
-</tr>
-<tr class="even">
-<td>numeric</td>
-<td>reelle Zahlen</td>
-<td align="center">5.2456</td>
-</tr>
-<tr class="odd">
-<td>logic</td>
-<td>logische Werte</td>
-<td align="center">TRUE</td>
-</tr>
-<tr class="even">
-<td>character</td>
-<td>Zeichengfolge</td>
-<td align="center">“Mexico”</td>
-</tr>
-<tr class="odd">
-<td>NULL,Inf,NaN</td>
-<td>Leer, Unendlich, keine Zahl</td>
-<td align="center"></td>
-</tr>
-</tbody>
-</table>
 <p>Die Klasse bzw. der Datentyp eines Objekts lässt sich
 mit der Funktion <code>class()</code> ermitteln oder aber spezifisch/logisch prüfen.</p>
 <div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="atomare-datentypen.html#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(alter_moni)</span></code></pre></div>
@@ -675,7 +668,41 @@ Du solltest verstanden haben, wie man Objekte an einen Namen bindet und warum da
 <li><input type="checkbox" disabled="" checked="" />
 Du solltest die elementaren Booleschen (logischen) Operationen in R schreiben können.</li>
 </ul>
+</div>
+<div id="literaturverweise" class="section level2 hasAnchor" number="3.8">
+<h2><span class="header-section-number">3.8</span> Literaturverweise<a href="atomare-datentypen.html#literaturverweise" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><em>Ergänzend</em></p>
+<ul>
+<li><a href="https://cran.r-project.org/doc/manuals/r-release/R-intro.pdf">R-Intro</a> Kapitel 1 &amp; 2</li>
+<li><a href="https://rstudio-education.github.io/hopr/basics.html">Hands-On Programming with R</a> Kapitel 2 (Ohne 2.4 &amp; 2.5)</li>
+</ul>
+<p><em>Weiterführend</em></p>
+<ul>
+<li><a href="https://adv-r.hadley.nz/">Advanced R</a> Kapitel 2</li>
+</ul>
+<!-- Referenzen  -->
+<div class="invisible" style="display:none">
+<p><span class="citation">Chambers (<a href="#ref-Chambers2014" role="doc-biblioref">2014</a>)</span>
+<span class="citation">Wickham (<a href="#ref-wickham2019advanced" role="doc-biblioref">2019</a>)</span>
+<span class="citation">(<a href="#ref-r-intro" role="doc-biblioref">n.d.</a>)</span>
+<span class="citation">Grolemund (<a href="#ref-grolemund2014hands" role="doc-biblioref">2014</a>)</span></p>
+</div>
 
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-r-intro" class="csl-entry">
+n.d. <a href="https://cran.r-project.org/doc/manuals/r-release/R-intro.html">https://cran.r-project.org/doc/manuals/r-release/R-intro.html</a>.
+</div>
+<div id="ref-Chambers2014" class="csl-entry">
+Chambers, John M. 2014. <span>“Object-Oriented Programming, Functional Programming and r.”</span> <a href="https://doi.org/10.48550/ARXIV.1409.3531">https://doi.org/10.48550/ARXIV.1409.3531</a>.
+</div>
+<div id="ref-grolemund2014hands" class="csl-entry">
+Grolemund, Garrett. 2014. <em>Hands-on Programming with r: Write Your Own Functions and Simulations</em>. " O’Reilly Media, Inc.". <a href="https://rstudio-education.github.io/hopr/">https://rstudio-education.github.io/hopr/</a>.
+</div>
+<div id="ref-wickham2019advanced" class="csl-entry">
+Wickham, Hadley. 2019. <em>Advanced r</em>. CRC press. <a href="https://adv-r.hadley.nz/">https://adv-r.hadley.nz/</a>.
 </div>
 </div>
 <div class="footnotes">
