@@ -8,7 +8,7 @@ Zunächst einmal wollen wir uns die atomaren Datentypen anschauen. Diese bilden 
 Datentyp              Beschreibung                            Beispiel 
 -------------------   -------------------------------------  ----------
 integer               ganze Zahlen                            -2L       
-numberic              rationale Zahlen                        5.2456   
+numeric               rationale Zahlen                        5.2456   
 logical               logische Werte                          TRUE     
 character             Zeichenfolge                           "Mexico" 
 NA,NULL,NaN           Unbestimmt, Leer, Undefiniert                    
@@ -358,7 +358,7 @@ Von dieser Sitzung solltest du folgendes mitgenommen haben:
 *Ergänzend*
 
 - [R-Intro](https://cran.r-project.org/doc/manuals/r-release/R-intro.pdf) Kapitel 1 & 2
-- [Hands-On Programming with R](https://rstudio-education.github.io/hopr/basics.html) Kapitel 2 (Ohne 2.4 & 2.5)
+- [Hands-On Programming with R](https://rstudio-education.github.io/hopr/basics.html) Kapitel 2 und 12 (Ohne 2.4 & 2.5)
 
 *Weiterführend* 
 

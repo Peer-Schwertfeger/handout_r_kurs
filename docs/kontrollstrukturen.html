@@ -541,8 +541,7 @@ Iteration) und <code>break</code> (bricht die Schleife ab).</p>
 <span id="cb246-6"><a href="kontrollstrukturen.html#cb246-6" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb246-7"><a href="kontrollstrukturen.html#cb246-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb246-8"><a href="kontrollstrukturen.html#cb246-8" aria-hidden="true" tabindex="-1"></a>v2</span></code></pre></div>
-<pre><code>##  [1] 1.000000 1.414214 1.732051 2.000000 2.236068 2.449490 2.645751 2.828427 3.000000
-## [10] 3.162278</code></pre>
+<pre><code>##  [1] 1.000000 1.414214 1.732051 2.000000 2.236068 2.449490 2.645751 2.828427 3.000000 3.162278</code></pre>
 <p>Da die meisten Funktionen in R bereits vektorisiert sind (<code>sqrt(v1)</code>) ist ein <code>for-loop</code> nicht immer die beste Variante, manchmal kann er allerdings sehr hilfreich sein.</p>
 </div>
 <div id="vektorisiertes-programmieren" class="section level2 hasAnchor" number="9.5">
@@ -553,8 +552,7 @@ Iteration) und <code>break</code> (bricht die Schleife ab).</p>
 <div class="sourceCode" id="cb249"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb249-1"><a href="kontrollstrukturen.html#cb249-1" aria-hidden="true" tabindex="-1"></a>v1 <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span></span>
 <span id="cb249-2"><a href="kontrollstrukturen.html#cb249-2" aria-hidden="true" tabindex="-1"></a><span class="fu">map_dbl</span>(<span class="at">.x =</span> v1,</span>
 <span id="cb249-3"><a href="kontrollstrukturen.html#cb249-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">.f =</span> sqrt)</span></code></pre></div>
-<pre><code>##  [1] 1.000000 1.414214 1.732051 2.000000 2.236068 2.449490 2.645751 2.828427 3.000000
-## [10] 3.162278</code></pre>
+<pre><code>##  [1] 1.000000 1.414214 1.732051 2.000000 2.236068 2.449490 2.645751 2.828427 3.000000 3.162278</code></pre>
 <p>Dabei passiert folgendes (<code>fun steht für function</code>):</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-129"></span>
 <img src="resources/map.png" alt="Quelle: https://tutorials.shinyapps.io/map-intro/_w_543ccdaf/www/images/map.png" width="80%" />
