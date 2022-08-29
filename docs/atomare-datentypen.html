@@ -328,7 +328,7 @@ div.csl-indent {
 <td align="center">-2L</td>
 </tr>
 <tr class="even">
-<td align="left">double</td>
+<td align="left">numberic</td>
 <td align="left">rationale Zahlen</td>
 <td align="center">5.2456</td>
 </tr>
@@ -354,7 +354,7 @@ div.csl-indent {
 </tr>
 </tbody>
 </table>
-<p>Die numerischen Datentypen <code>integer</code> und <code>double</code> erlauben es numerische Informationen zu repräsentieren. Mit dem Datentyp <code>logical</code> können logische Informationen repräsentiert werden. Um symbolische Informationen zu repräsentieren, verwenden wir den Datentyp <code>character</code>. Mit numerischen-, logischen- und symbolischen Informationen ist es bereits möglich eine Vielzahl von Sachverhalten auszudrücken. Was dies sein kann, wollen wir uns im Folgenden anschauen.</p>
+<p>Die numerischen Datentypen <code>integer</code> und <code>numeric</code> erlauben es numerische Informationen zu repräsentieren. Mit dem Datentyp <code>logical</code> können logische Informationen repräsentiert werden. Um symbolische Informationen zu repräsentieren, verwenden wir den Datentyp <code>character</code>. Mit numerischen-, logischen- und symbolischen Informationen ist es bereits möglich eine Vielzahl von Sachverhalten auszudrücken. Was dies sein kann, wollen wir uns im Folgenden anschauen.</p>
 <div id="arithmetische-grundoperationen-und-basisfunktionen" class="section level2 hasAnchor" number="3.1">
 <h2><span class="header-section-number">3.1</span> Arithmetische Grundoperationen und Basisfunktionen<a href="atomare-datentypen.html#arithmetische-grundoperationen-und-basisfunktionen" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>R beherrscht für alle Zahlen die arithmetischen Grundoperationen und eignet sich somit wunderbar als Taschenrechner.</p>
@@ -527,14 +527,7 @@ Berechnungen und Operationen zur Verfügung:</p>
 <p>Wir haben mittlerweile ein paar Objekte im Speicher
 angelegt und an Namen gebunden. Mit <code>ls()</code> kann man diese abrufen:</p>
 <div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="atomare-datentypen.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span>()</span></code></pre></div>
-<pre><code>##  [1] &quot;alter_moni&quot;         &quot;alter_tom&quot;          &quot;countdown&quot;          &quot;D&quot;                 
-##  [5] &quot;df_lineup&quot;          &quot;DJ_Alter&quot;           &quot;DJ_Geburtsjahr&quot;     &quot;DJ_Name&quot;           
-##  [9] &quot;DJ_Vinyl&quot;           &quot;i&quot;                  &quot;is.positive&quot;        &quot;M&quot;                 
-## [13] &quot;name&quot;               &quot;name_bundeskanzler&quot; &quot;p&quot;                  &quot;pow&quot;               
-## [17] &quot;profil_marie&quot;       &quot;q&quot;                  &quot;quadrat&quot;            &quot;starwars&quot;          
-## [21] &quot;theendoftheworld&quot;   &quot;un_lambda&quot;          &quot;v1&quot;                 &quot;v1_log&quot;            
-## [25] &quot;v2&quot;                 &quot;x&quot;                  &quot;x_1&quot;                &quot;x_test&quot;            
-## [29] &quot;y&quot;                  &quot;y_test&quot;             &quot;z&quot;                  &quot;zahl&quot;</code></pre>
+<pre><code>## [1] &quot;x_1&quot;    &quot;x_test&quot; &quot;y_test&quot;</code></pre>
 <p>Mit <code>rm()</code> kann man unnötige Objekte über deren Namen entfernen:</p>
 <div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="atomare-datentypen.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(y_test)</span></code></pre></div>
 <p>Wenn ihr gleich alle angelegte, referenzierbare Objekte aus dem Speicher entfernen wollt:</p>

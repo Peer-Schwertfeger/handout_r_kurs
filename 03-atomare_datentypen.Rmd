@@ -8,13 +8,13 @@ Zunächst einmal wollen wir uns die atomaren Datentypen anschauen. Diese bilden 
 Datentyp              Beschreibung                            Beispiel 
 -------------------   -------------------------------------  ----------
 integer               ganze Zahlen                            -2L       
-double                rationale Zahlen                        5.2456   
+numberic              rationale Zahlen                        5.2456   
 logical               logische Werte                          TRUE     
 character             Zeichenfolge                           "Mexico" 
 NA,NULL,NaN           Unbestimmt, Leer, Undefiniert                    
 Inf                   Unendlich                                        
 
-Die numerischen Datentypen `integer` und `double` erlauben es numerische Informationen zu repräsentieren. Mit dem Datentyp `logical` können logische Informationen repräsentiert werden. Um symbolische Informationen zu repräsentieren, verwenden wir den Datentyp `character`. Mit numerischen-, logischen- und symbolischen Informationen ist es bereits möglich eine Vielzahl von Sachverhalten auszudrücken. Was dies sein kann, wollen wir uns im Folgenden anschauen.
+Die numerischen Datentypen `integer` und `numeric` erlauben es numerische Informationen zu repräsentieren. Mit dem Datentyp `logical` können logische Informationen repräsentiert werden. Um symbolische Informationen zu repräsentieren, verwenden wir den Datentyp `character`. Mit numerischen-, logischen- und symbolischen Informationen ist es bereits möglich eine Vielzahl von Sachverhalten auszudrücken. Was dies sein kann, wollen wir uns im Folgenden anschauen.
 
 ## Arithmetische Grundoperationen und Basisfunktionen
 
