@@ -348,7 +348,7 @@ is.numeric(alter_moni)
 Von dieser Sitzung solltest du folgendes mitgenommen haben: 
 
 - [x] Du solltest verstanden haben, warum man verschiedene Datentypen unterscheidet.
-- [x] Du solltest die drei grundlegenden weisen Informationen zu repräsentieren nennen können und die dazugehörigen Datentypen.
+- [x] Du solltest die drei grundlegenden Weisen Informationen zu repräsentieren nennen können und die dazugehörigen Datentypen.
 - [x] Du solltest verstanden haben, wie man Objekte an einen Namen bindet und warum das nützlich sein kann.
 - [x] Du solltest die elementaren Booleschen (logischen) Operationen in R schreiben können.
 
@@ -358,11 +358,11 @@ Von dieser Sitzung solltest du folgendes mitgenommen haben:
 *Ergänzend*
 
 - [R-Intro](https://cran.r-project.org/doc/manuals/r-release/R-intro.pdf) Kapitel 1 & 2
-- [Hands-On Programming with R](https://rstudio-education.github.io/hopr/basics.html) Kapitel 2 und 12 (Ohne 2.4 & 2.5)
+- [Hands-On Programming with R](https://rstudio-education.github.io/hopr/basics.html) Kapitel 2 (Ohne 2.4 & 2.5)
 
 *Weiterführend* 
 
-- [Advanced R](https://adv-r.hadley.nz/) Kapitel 2 
+- [Advanced R](https://adv-r.hadley.nz/) Kapitel 2 und 12
 
 <!-- Referenzen  -->
 
